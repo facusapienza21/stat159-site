@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>An overview of Jupyter tools &#8212; Collaborative and Reproducible Data Science</title>
+    <title>Local user, branching &#8212; Collaborative and Reproducible Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="A quick, practical intro to the Jupyter Notebook" href="01-Intro-Jupyter.html" />
-    <link rel="prev" title="Git Visuals" href="../intro-git/git-visuals.html" />
+    <link rel="next" title="Remotes" href="remote.html" />
+    <link rel="prev" title="Local, single-user, linear workflow" href="local.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -147,79 +147,79 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-git/Git-Tutorial.html">
+  <a class="reference internal" href="Git-Tutorial.html">
    An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../intro-git/intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
    Git
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/configuration.html">
+    <a class="reference internal" href="configuration.html">
      Configuration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/local.html">
+    <a class="reference internal" href="local.html">
      Local, single-user, linear workflow
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/branch.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Local user, branching
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/remote.html">
+    <a class="reference internal" href="remote.html">
      Remotes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/conflict.html">
+    <a class="reference internal" href="conflict.html">
      Conflict management
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-git/git-visuals.html">
+  <a class="reference internal" href="git-visuals.html">
    Git Visuals
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro-jupyter/Index.html">
    An overview of Jupyter tools
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Intro-Jupyter.html">
+  <a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">
    A quick, practical intro to the Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-Beyond-Plain-Python.html">
+  <a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">
    IPython: beyond plain Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Custom-Display-Logic.html">
+  <a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">
    Custom Display Logic
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-Rich-Output.html">
+  <a class="reference internal" href="../intro-jupyter/04-Rich-Output.html">
    Rich Output
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05-widgets-interact.html">
+  <a class="reference internal" href="../intro-jupyter/05-widgets-interact.html">
    Widgets without writing widgets: interact
   </a>
  </li>
@@ -344,7 +344,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lectures/intro-jupyter/Index.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lectures/intro-git/branch.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -387,7 +387,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/lectures/intro-jupyter/Index.ipynb"
+        <a href="../../_sources/lectures/intro-git/branch.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -436,7 +436,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>An overview of Jupyter tools</h1>
+                <h1>Local user, branching</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -448,15 +448,52 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="an-overview-of-jupyter-tools">
-<h1>An overview of Jupyter tools<a class="headerlink" href="#an-overview-of-jupyter-tools" title="Permalink to this headline">#</a></h1>
-<ol class="simple">
-<li><p><a class="reference internal" href="01-Intro-Jupyter.html"><span class="doc std std-doc">Intro-Jupyter</span></a></p></li>
-<li><p><a class="reference internal" href="02-Beyond-Plain-Python.html"><span class="doc std std-doc">Beyond-Plain-Python</span></a></p></li>
-<li><p><a class="reference internal" href="03-Custom-Display-Logic.html"><span class="doc std std-doc">Custom display logic</span></a></p></li>
-<li><p><a class="reference internal" href="04-Rich-Output.html"><span class="doc std std-doc">Rich Output</span></a></p></li>
-<li><p><a class="reference internal" href="05-widgets-interact.html"><span class="doc std std-doc">Widgets-interact</span></a></p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="local-user-branching">
+<h1>Local user, branching<a class="headerlink" href="#local-user-branching" title="Permalink to this headline">#</a></h1>
+<p>What is a branch?  Simply a <em>label for the ‘current’ commit in a sequence of ongoing commits</em>:</p>
+<p><img alt="" src="../../_images/masterbranch.png" /></p>
+<!-- offline: 
+<img src="https://raw.github.com/fperez/reprosw/master/fig/masterbranch.png" >
+--><p>There can be multiple branches alive at any point in time; the working directory is the state of a special pointer called HEAD.  In this example there are two branches, <em>master</em> and <em>testing</em>, and <em>testing</em> is the currently active branch since it’s what HEAD points to:</p>
+<p><img alt="" src="../../_images/HEAD_testing.png" /></p>
+<!-- offline: 
+<img src="https://raw.github.com/fperez/reprosw/master/fig/HEAD_testing.png" >
+--><p>Once new commits are made on a branch, HEAD and the branch label move with the new commits:</p>
+<p><img alt="" src="../../_images/branchcommit.png" /></p>
+<p>This allows the history of both branches to diverge:</p>
+<p><img alt="" src="../../_images/mergescenario.png" /></p>
+<p>But based on this graph structure, git can compute the necessary information to merge the divergent branches back and continue with a unified line of development:</p>
+<p><img alt="" src="../../_images/mergeaftermath.png" /></p>
+<p>Let’s now illustrate all of this with a concrete example.  Let’s get our bearings first:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
+</pre></div>
+</div>
+<p>We are now going to try two different routes of development: on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch we will add one file and on the <code class="docutils literal notranslate"><span class="pre">experiment</span></code> branch, which we will create, we will add a different one.  We will then merge the experimental branch into <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git switch -c experiment
+</pre></div>
+</div>
+<p>And now we make some new changes</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Some crazy idea&quot;</span> &gt; experiment.txt
+git add experiment.txt
+git commit -a -m<span class="s2">&quot;Trying something new&quot;</span>
+git slog
+</pre></div>
+</div>
+<p>and we comeback to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and make some new changes</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git switch main
+<span class="nb">echo</span> <span class="s2">&quot;All the while, more work goes on in master...&quot;</span> &gt;&gt; file-newname.txt
+git commit -a -m<span class="s2">&quot;The mainline keeps moving&quot;</span>
+</pre></div>
+</div>
+<p>By default, all variations of the git <code class="docutils literal notranslate"><span class="pre">log</span></code> commands only show the currently active branch.  If we want to see <em>all</em> branches, we can ask for them with the <code class="docutils literal notranslate"><span class="pre">--all</span></code> flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git slog --all
+</pre></div>
+</div>
+<p>Above, we can see the commit whose message is <code class="docutils literal notranslate"><span class="pre">Try</span> <span class="pre">something</span> <span class="pre">new</span></code>, that comes from the <code class="docutils literal notranslate"><span class="pre">experiment</span></code> branch.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git merge experiment
+git slog
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -472,7 +509,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./lectures/intro-jupyter"
+            path: "./lectures/intro-git"
         },
         predefinedOutput: true
     }
@@ -486,17 +523,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro-git/git-visuals.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="local.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Git Visuals</p>
+            <p class="prev-next-title">Local, single-user, linear workflow</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01-Intro-Jupyter.html" title="next page">
+    <a class='right-next' id="next-link" href="remote.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">A quick, practical intro to the Jupyter Notebook</p>
+        <p class="prev-next-title">Remotes</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

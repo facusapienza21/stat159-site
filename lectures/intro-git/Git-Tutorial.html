@@ -160,7 +160,32 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="configuration.html">
+     Configuration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="local.html">
+     Local, single-user, linear workflow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="branch.html">
+     Local user, branching
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="remote.html">
+     Remotes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conflict.html">
+     Conflict management
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -421,233 +446,247 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#from-personal-workflows-to-open-collaboration">
-   From personal workflows to open collaboration
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wikipedia">
-   Wikipedia
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git-is-an-enabling-technology-use-version-control-for-everything">
-   Git is an enabling technology: Use version control for everything
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#teaching-courses-with-git">
-   Teaching courses with Git
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#annotated-history-of-each-student-s-worfklow-and-backup">
-   Annotated history of each student’s worfklow (and backup!)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-plan-for-this-tutorial">
-   The plan for this tutorial
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#very-high-level-picture-an-overview-of-key-concepts">
-   Very high level picture: an overview of key concepts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-things-first-git-must-be-configured-before-first-use">
-   First things first: git must be configured before first use
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convenient-credentials-management">
-     Convenient credentials management
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-personal-workflows-to-open-collaboration">
+     From personal workflows to open collaboration
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wikipedia">
+     Wikipedia
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-is-an-enabling-technology-use-version-control-for-everything">
+     Git is an enabling technology: Use version control for everything
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teaching-courses-with-git">
+     Teaching courses with Git
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#annotated-history-of-each-student-s-worfklow-and-backup">
+     Annotated history of each student’s worfklow (and backup!)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-plan-for-this-tutorial">
+     The plan for this tutorial
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#very-high-level-picture-an-overview-of-key-concepts">
+     Very high level picture: an overview of key concepts
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stage-1-local-single-user-linear-workflow">
-   Stage 1: Local, single-user, linear workflow
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-first-commit">
+   Our first commit
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-init-create-an-empty-repository">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       init
-      </span>
-     </code>
-     : create an empty repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-add-tell-git-about-this-new-file">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       add
-      </span>
-     </code>
-     : tell git about this new file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-commit-permanently-record-our-changes-in-git-s-database">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       commit
-      </span>
-     </code>
-     : permanently record our changes in git’s database
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-log-what-has-been-committed-so-far">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       log
-      </span>
-     </code>
-     : what has been committed so far
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-diff-what-have-i-changed">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       diff
-      </span>
-     </code>
-     : what have I changed?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-cycle-of-git-virtue-work-commit-work-commit">
-     The cycle of git virtue: work, commit, work, commit, …
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-log-revisited">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       log
-      </span>
-     </code>
-     revisited
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-mv-and-rm-moving-and-removing-files">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       mv
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       rm
-      </span>
-     </code>
-     : moving and removing files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#local-user-branching">
-   Local user, branching
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-remotes-as-a-single-user">
-   Using remotes as a single user
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#an-important-aside-conflict-management">
-     An important aside: conflict management
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">
-   Collaborating on github with a small team
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#full-contact-github-distributed-collaboration-with-large-teams">
-   Full-contact github: distributed collaboration with large teams
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-useful-commands">
-   Other useful commands
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git-resources">
-   Git resources
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introductory-materials">
-     Introductory materials
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#beyond-the-basics">
-     Beyond the basics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-few-useful-tips-for-common-tasks">
-     A few useful tips for common tasks
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-things-first-git-must-be-configured-before-first-use">
+     First things first: git must be configured before first use
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#better-shell-support">
-       Better shell support
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#convenient-credentials-management">
+       Convenient credentials management
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#embedding-git-information-in-latex-documents">
-       Embedding Git information in LaTeX documents
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stage-1-local-single-user-linear-workflow">
+     Stage 1: Local, single-user, linear workflow
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-init-create-an-empty-repository">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         init
+        </span>
+       </code>
+       : create an empty repository
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#git-export">
-       git export
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-add-tell-git-about-this-new-file">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         add
+        </span>
+       </code>
+       : tell git about this new file
       </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-commit-permanently-record-our-changes-in-git-s-database">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         commit
+        </span>
+       </code>
+       : permanently record our changes in git’s database
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-log-what-has-been-committed-so-far">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         log
+        </span>
+       </code>
+       : what has been committed so far
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-diff-what-have-i-changed">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         diff
+        </span>
+       </code>
+       : what have I changed?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-cycle-of-git-virtue-work-commit-work-commit">
+       The cycle of git virtue: work, commit, work, commit, …
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-log-revisited">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         log
+        </span>
+       </code>
+       revisited
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-mv-and-rm-moving-and-removing-files">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         mv
+        </span>
+       </code>
+       and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         rm
+        </span>
+       </code>
+       : moving and removing files
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise">
+       Exercise
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-user-branching">
+     Local user, branching
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-remotes-as-a-single-user">
+     Using remotes as a single user
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#an-important-aside-conflict-management">
+       An important aside: conflict management
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">
+     Collaborating on github with a small team
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#full-contact-github-distributed-collaboration-with-large-teams">
+     Full-contact github: distributed collaboration with large teams
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-useful-commands">
+     Other useful commands
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-resources">
+     Git resources
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introductory-materials">
+       Introductory materials
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#beyond-the-basics">
+       Beyond the basics
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-few-useful-tips-for-common-tasks">
+       A few useful tips for common tasks
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#better-shell-support">
+         Better shell support
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#embedding-git-information-in-latex-documents">
+         Embedding Git information in LaTeX documents
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#git-export">
+         git export
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -672,233 +711,247 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#from-personal-workflows-to-open-collaboration">
-   From personal workflows to open collaboration
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wikipedia">
-   Wikipedia
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git-is-an-enabling-technology-use-version-control-for-everything">
-   Git is an enabling technology: Use version control for everything
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#teaching-courses-with-git">
-   Teaching courses with Git
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#annotated-history-of-each-student-s-worfklow-and-backup">
-   Annotated history of each student’s worfklow (and backup!)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-plan-for-this-tutorial">
-   The plan for this tutorial
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#very-high-level-picture-an-overview-of-key-concepts">
-   Very high level picture: an overview of key concepts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-things-first-git-must-be-configured-before-first-use">
-   First things first: git must be configured before first use
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convenient-credentials-management">
-     Convenient credentials management
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-personal-workflows-to-open-collaboration">
+     From personal workflows to open collaboration
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wikipedia">
+     Wikipedia
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-is-an-enabling-technology-use-version-control-for-everything">
+     Git is an enabling technology: Use version control for everything
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teaching-courses-with-git">
+     Teaching courses with Git
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#annotated-history-of-each-student-s-worfklow-and-backup">
+     Annotated history of each student’s worfklow (and backup!)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-plan-for-this-tutorial">
+     The plan for this tutorial
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#very-high-level-picture-an-overview-of-key-concepts">
+     Very high level picture: an overview of key concepts
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stage-1-local-single-user-linear-workflow">
-   Stage 1: Local, single-user, linear workflow
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-first-commit">
+   Our first commit
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-init-create-an-empty-repository">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       init
-      </span>
-     </code>
-     : create an empty repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-add-tell-git-about-this-new-file">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       add
-      </span>
-     </code>
-     : tell git about this new file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-commit-permanently-record-our-changes-in-git-s-database">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       commit
-      </span>
-     </code>
-     : permanently record our changes in git’s database
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-log-what-has-been-committed-so-far">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       log
-      </span>
-     </code>
-     : what has been committed so far
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-diff-what-have-i-changed">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       diff
-      </span>
-     </code>
-     : what have I changed?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-cycle-of-git-virtue-work-commit-work-commit">
-     The cycle of git virtue: work, commit, work, commit, …
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-log-revisited">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       log
-      </span>
-     </code>
-     revisited
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-mv-and-rm-moving-and-removing-files">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       git
-      </span>
-      <span class="pre">
-       mv
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       rm
-      </span>
-     </code>
-     : moving and removing files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#local-user-branching">
-   Local user, branching
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-remotes-as-a-single-user">
-   Using remotes as a single user
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#an-important-aside-conflict-management">
-     An important aside: conflict management
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">
-   Collaborating on github with a small team
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#full-contact-github-distributed-collaboration-with-large-teams">
-   Full-contact github: distributed collaboration with large teams
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-useful-commands">
-   Other useful commands
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git-resources">
-   Git resources
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introductory-materials">
-     Introductory materials
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#beyond-the-basics">
-     Beyond the basics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-few-useful-tips-for-common-tasks">
-     A few useful tips for common tasks
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-things-first-git-must-be-configured-before-first-use">
+     First things first: git must be configured before first use
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#better-shell-support">
-       Better shell support
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#convenient-credentials-management">
+       Convenient credentials management
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#embedding-git-information-in-latex-documents">
-       Embedding Git information in LaTeX documents
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stage-1-local-single-user-linear-workflow">
+     Stage 1: Local, single-user, linear workflow
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-init-create-an-empty-repository">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         init
+        </span>
+       </code>
+       : create an empty repository
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#git-export">
-       git export
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-add-tell-git-about-this-new-file">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         add
+        </span>
+       </code>
+       : tell git about this new file
       </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-commit-permanently-record-our-changes-in-git-s-database">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         commit
+        </span>
+       </code>
+       : permanently record our changes in git’s database
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-log-what-has-been-committed-so-far">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         log
+        </span>
+       </code>
+       : what has been committed so far
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-diff-what-have-i-changed">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         diff
+        </span>
+       </code>
+       : what have I changed?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-cycle-of-git-virtue-work-commit-work-commit">
+       The cycle of git virtue: work, commit, work, commit, …
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-log-revisited">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         log
+        </span>
+       </code>
+       revisited
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-mv-and-rm-moving-and-removing-files">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         git
+        </span>
+        <span class="pre">
+         mv
+        </span>
+       </code>
+       and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         rm
+        </span>
+       </code>
+       : moving and removing files
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise">
+       Exercise
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-user-branching">
+     Local user, branching
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-remotes-as-a-single-user">
+     Using remotes as a single user
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#an-important-aside-conflict-management">
+       An important aside: conflict management
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">
+     Collaborating on github with a small team
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#full-contact-github-distributed-collaboration-with-large-teams">
+     Full-contact github: distributed collaboration with large teams
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-useful-commands">
+     Other useful commands
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-resources">
+     Git resources
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introductory-materials">
+       Introductory materials
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#beyond-the-basics">
+       Beyond the basics
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-few-useful-tips-for-common-tasks">
+       A few useful tips for common tasks
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#better-shell-support">
+         Better shell support
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#embedding-git-information-in-latex-documents">
+         Embedding Git information in LaTeX documents
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#git-export">
+         git export
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -999,24 +1052,15 @@ information stored as computer files.</strong>”</p>
 <p><img alt="" src="../../_images/threecommits.png" /></p>
 <p>Note: these form a Directed Acyclic Graph (DAG), with nodes identified by their <em>hash</em>.</p>
 <p>A <strong>hash</strong>: a fingerprint of the content of each commit <em>and its parent</em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">sha1</span>
-
-<span class="c1"># Our first commit</span>
-<span class="n">data1</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;This is the start of my paper.&#39;</span>
-<span class="n">meta1</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;date: 1/1/17&#39;</span>
-<span class="n">hash1</span> <span class="o">=</span> <span class="n">sha1</span><span class="p">(</span><span class="n">data1</span> <span class="o">+</span> <span class="n">meta1</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hash:&#39;</span><span class="p">,</span> <span class="n">hash1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hash: 3b32905baabd5ff22b3832c892078f78f5e5bd3b
-</pre></div>
-</div>
-</div>
-</div>
+<p>from hashlib import sha1</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="our-first-commit">
+<h1>Our first commit<a class="headerlink" href="#our-first-commit" title="Permalink to this headline">#</a></h1>
+<p>data1 = b’This is the start of my paper.’
+meta1 = b’date: 1/1/17’
+hash1 = sha1(data1 + meta1).hexdigest( )
+print(‘Hash:’, hash1)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our second commit, linked to the first</span>
@@ -1035,7 +1079,6 @@ information stored as computer files.</strong>”</p>
 </div>
 </div>
 <p>And this is pretty much the essence of Git!</p>
-</section>
 <section id="first-things-first-git-must-be-configured-before-first-use">
 <h2>First things first: git must be configured before first use<a class="headerlink" href="#first-things-first-git-must-be-configured-before-first-use" title="Permalink to this headline">#</a></h2>
 <p>The minimal amount of configuration for git to work without pestering you is to tell it who you are. You should run a version of these commands in your shell:</p>

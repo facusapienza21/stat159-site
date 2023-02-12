@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>An overview of Jupyter tools &#8212; Collaborative and Reproducible Data Science</title>
+    <title>Conflict management &#8212; Collaborative and Reproducible Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="A quick, practical intro to the Jupyter Notebook" href="01-Intro-Jupyter.html" />
-    <link rel="prev" title="Git Visuals" href="../intro-git/git-visuals.html" />
+    <link rel="next" title="Git Visuals" href="git-visuals.html" />
+    <link rel="prev" title="Remotes" href="remote.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -147,79 +147,79 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-git/Git-Tutorial.html">
+  <a class="reference internal" href="Git-Tutorial.html">
    An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../intro-git/intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
    Git
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/configuration.html">
+    <a class="reference internal" href="configuration.html">
      Configuration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/local.html">
+    <a class="reference internal" href="local.html">
      Local, single-user, linear workflow
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/branch.html">
+    <a class="reference internal" href="branch.html">
      Local user, branching
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/remote.html">
+    <a class="reference internal" href="remote.html">
      Remotes
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/conflict.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Conflict management
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-git/git-visuals.html">
+  <a class="reference internal" href="git-visuals.html">
    Git Visuals
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro-jupyter/Index.html">
    An overview of Jupyter tools
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Intro-Jupyter.html">
+  <a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">
    A quick, practical intro to the Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-Beyond-Plain-Python.html">
+  <a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">
    IPython: beyond plain Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Custom-Display-Logic.html">
+  <a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">
    Custom Display Logic
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-Rich-Output.html">
+  <a class="reference internal" href="../intro-jupyter/04-Rich-Output.html">
    Rich Output
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05-widgets-interact.html">
+  <a class="reference internal" href="../intro-jupyter/05-widgets-interact.html">
    Widgets without writing widgets: interact
   </a>
  </li>
@@ -344,7 +344,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lectures/intro-jupyter/Index.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lectures/intro-git/conflict.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -387,7 +387,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/lectures/intro-jupyter/Index.ipynb"
+        <a href="../../_sources/lectures/intro-git/conflict.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -436,7 +436,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>An overview of Jupyter tools</h1>
+                <h1>Conflict management</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -448,15 +448,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="an-overview-of-jupyter-tools">
-<h1>An overview of Jupyter tools<a class="headerlink" href="#an-overview-of-jupyter-tools" title="Permalink to this headline">#</a></h1>
-<ol class="simple">
-<li><p><a class="reference internal" href="01-Intro-Jupyter.html"><span class="doc std std-doc">Intro-Jupyter</span></a></p></li>
-<li><p><a class="reference internal" href="02-Beyond-Plain-Python.html"><span class="doc std std-doc">Beyond-Plain-Python</span></a></p></li>
-<li><p><a class="reference internal" href="03-Custom-Display-Logic.html"><span class="doc std std-doc">Custom display logic</span></a></p></li>
-<li><p><a class="reference internal" href="04-Rich-Output.html"><span class="doc std std-doc">Rich Output</span></a></p></li>
-<li><p><a class="reference internal" href="05-widgets-interact.html"><span class="doc std std-doc">Widgets-interact</span></a></p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="conflict-management">
+<h1>Conflict management<a class="headerlink" href="#conflict-management" title="Permalink to this headline">#</a></h1>
+<p>While git is very good at merging, if two different branches modify the same file in the same location, it simply can’t decide which change should prevail.  At that point, human intervention is necessary to make the decision.  Git will help you by marking the location in the file that has a problem, but it’s up to you to resolve the conflict.  Let’s see how that works by intentionally creating a conflict.</p>
+<p>We start by creating a branch and making a change to our experiment file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git switch -c trouble
+<span class="nb">echo</span> <span class="s2">&quot;This is going to be a problem...&quot;</span> &gt;&gt; experiment.txt
+git commit -a -m<span class="s2">&quot;Changes in the trouble branch&quot;</span>
+</pre></div>
+</div>
+<p>And now we go back to the master branch, where we change the <em>same</em> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git switch main
+<span class="nb">echo</span> <span class="s2">&quot;More work on the master branch...&quot;</span> &gt;&gt; experiment.txt
+git commit -a -m<span class="s2">&quot;Mainline work&quot;</span>
+</pre></div>
+</div>
+<p>So now let’s see what happens if we try to merge the <code class="docutils literal notranslate"><span class="pre">trouble</span></code> branch into <code class="docutils literal notranslate"><span class="pre">master</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git merge trouble
+</pre></div>
+</div>
+<p>Let’s see what git has put into our file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat experiment.txt
+</pre></div>
+</div>
+<p>At this point, we go into the file with a text editor, decide which changes to keep, and make a new commit that records our decision.  I’ve now made the edits, in this case I decided that both pieces of text were useful, but integrated them with some changes. After, this we make our new commit</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -a -m<span class="s2">&quot;Completed merge of trouble, fixing conflicts along the way&quot;</span>
+git slog
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While it’s a good idea to understand the basics of fixing merge conflicts by hand, in some cases you may find the use of an automated tool useful.  Git supports multiple <a class="reference external" href="https://www.kernel.org/pub/software/scm/git/docs/git-mergetool.html">merge tools</a>: a merge tool is a piece of software that conforms to a basic interface and knows how to merge two files into a new one.  Since these are typically graphical tools, there are various to choose from for the different operating systems, and as long as they obey a basic command structure, git can work with any of them.</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -472,7 +495,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./lectures/intro-jupyter"
+            path: "./lectures/intro-git"
         },
         predefinedOutput: true
     }
@@ -486,17 +509,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro-git/git-visuals.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="remote.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Git Visuals</p>
+            <p class="prev-next-title">Remotes</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01-Intro-Jupyter.html" title="next page">
+    <a class='right-next' id="next-link" href="git-visuals.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">A quick, practical intro to the Jupyter Notebook</p>
+        <p class="prev-next-title">Git Visuals</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

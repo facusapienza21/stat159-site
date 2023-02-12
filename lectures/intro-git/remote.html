@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>An overview of Jupyter tools &#8212; Collaborative and Reproducible Data Science</title>
+    <title>Remotes &#8212; Collaborative and Reproducible Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="A quick, practical intro to the Jupyter Notebook" href="01-Intro-Jupyter.html" />
-    <link rel="prev" title="Git Visuals" href="../intro-git/git-visuals.html" />
+    <link rel="next" title="Conflict management" href="conflict.html" />
+    <link rel="prev" title="Local user, branching" href="branch.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -147,79 +147,79 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-git/Git-Tutorial.html">
+  <a class="reference internal" href="Git-Tutorial.html">
    An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../intro-git/intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
    Git
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/configuration.html">
+    <a class="reference internal" href="configuration.html">
      Configuration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/local.html">
+    <a class="reference internal" href="local.html">
      Local, single-user, linear workflow
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/branch.html">
+    <a class="reference internal" href="branch.html">
      Local user, branching
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/remote.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Remotes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro-git/conflict.html">
+    <a class="reference internal" href="conflict.html">
      Conflict management
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-git/git-visuals.html">
+  <a class="reference internal" href="git-visuals.html">
    Git Visuals
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro-jupyter/Index.html">
    An overview of Jupyter tools
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Intro-Jupyter.html">
+  <a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">
    A quick, practical intro to the Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-Beyond-Plain-Python.html">
+  <a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">
    IPython: beyond plain Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Custom-Display-Logic.html">
+  <a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">
    Custom Display Logic
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-Rich-Output.html">
+  <a class="reference internal" href="../intro-jupyter/04-Rich-Output.html">
    Rich Output
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05-widgets-interact.html">
+  <a class="reference internal" href="../intro-jupyter/05-widgets-interact.html">
    Widgets without writing widgets: interact
   </a>
  </li>
@@ -344,7 +344,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lectures/intro-jupyter/Index.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lectures/intro-git/remote.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -387,7 +387,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/lectures/intro-jupyter/Index.ipynb"
+        <a href="../../_sources/lectures/intro-git/remote.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -436,7 +436,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>An overview of Jupyter tools</h1>
+                <h1>Remotes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -448,15 +448,51 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="an-overview-of-jupyter-tools">
-<h1>An overview of Jupyter tools<a class="headerlink" href="#an-overview-of-jupyter-tools" title="Permalink to this headline">#</a></h1>
-<ol class="simple">
-<li><p><a class="reference internal" href="01-Intro-Jupyter.html"><span class="doc std std-doc">Intro-Jupyter</span></a></p></li>
-<li><p><a class="reference internal" href="02-Beyond-Plain-Python.html"><span class="doc std std-doc">Beyond-Plain-Python</span></a></p></li>
-<li><p><a class="reference internal" href="03-Custom-Display-Logic.html"><span class="doc std std-doc">Custom display logic</span></a></p></li>
-<li><p><a class="reference internal" href="04-Rich-Output.html"><span class="doc std std-doc">Rich Output</span></a></p></li>
-<li><p><a class="reference internal" href="05-widgets-interact.html"><span class="doc std std-doc">Widgets-interact</span></a></p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="remotes">
+<h1>Remotes<a class="headerlink" href="#remotes" title="Permalink to this headline">#</a></h1>
+<p>We are now going to introduce the concept of a <em>remote repository</em>: a pointer to another copy of the repository that lives on a different location.  This can be simply a different path on the filesystem or a server on the internet.</p>
+<p>For this discussion, we’ll be using remotes hosted on the <a class="reference external" href="http://github.com">GitHub.com</a> service, but you can equally use other services like <a class="reference external" href="http://bitbucket.org">BitBucket</a> or <a class="reference external" href="http://gitorious.org">Gitorious</a> as well as host your own.</p>
+<p>Let’s first take a look to see if there is a remote asocciated to the <code class="docutils literal notranslate"><span class="pre">test</span></code> repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
+</pre></div>
+</div>
+<p>Since the above cell didn’t produce any output after the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> call, it means we have no remote repositories configured.  We will now proceed to do so.  Once logged into GitHub, go to the <a class="reference external" href="https://github.com/new">new repository page</a> and make a repository called <code class="docutils literal notranslate"><span class="pre">test</span></code>.  Do <strong>not</strong> check the box that says <code class="docutils literal notranslate"><span class="pre">Initialize</span> <span class="pre">this</span> <span class="pre">repository</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">README</span></code>, since we already have an existing repository here.  That option is useful when you’re starting first at Github and don’t have a repo made already on a local computer.</p>
+<p>We can now follow the instructions from the next page:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote add origin https://github.com/fperez/test.git
+git branch -M main
+git push -u origin main
+</pre></div>
+</div>
+<p>Let’s see the remote situation again:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
+</pre></div>
+</div>
+<p>We can now <a class="reference external" href="https://github.com/fperez/test">see this repository publicly on github</a>.</p>
+<p>Let’s see how this can be useful for backup and syncing work between two different computers.  I’ll simulate a 2nd computer by working in a different directory…</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+git clone https://github.com/fperez/test.git test2
+<span class="nb">cd</span> test2
+<span class="nb">pwd</span>
+git remote -v
+</pre></div>
+</div>
+<p>Let’s now make some changes in one ‘computer’ and synchronize them on the second.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> test2  <span class="c1"># working on computer #2</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;More new content on my experiment&quot;</span> &gt;&gt; experiment.txt
+git commit -a -m<span class="s2">&quot;More work, on machine #2&quot;</span>
+</pre></div>
+</div>
+<p>Now we put this new work up on the github server so it’s available from the internet</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>Now let’s fetch that work from machine #1:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+<span class="nb">cd</span> <span class="nb">test</span> 
+git pull
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -472,7 +508,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./lectures/intro-jupyter"
+            path: "./lectures/intro-git"
         },
         predefinedOutput: true
     }
@@ -486,17 +522,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro-git/git-visuals.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="branch.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Git Visuals</p>
+            <p class="prev-next-title">Local user, branching</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01-Intro-Jupyter.html" title="next page">
+    <a class='right-next' id="next-link" href="conflict.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">A quick, practical intro to the Jupyter Notebook</p>
+        <p class="prev-next-title">Conflict management</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
