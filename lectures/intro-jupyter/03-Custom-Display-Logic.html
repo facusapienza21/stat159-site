@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../../overview/overview.html">
+                <a class="reference internal" href="../../index.html">
                     Statistics 159/259, Spring 2023 Course Summary
                 </a>
             </li>
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../overview/syllabus.html">
-   Syllabus for Statistics 159/259: Reproducible and Collaborative Statistical Data Science
+   Syllabus
   </a>
  </li>
  <li class="toctree-l1">
@@ -152,6 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../intro-git/Git-Tutorial.html">
    An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro-git/intro.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../intro-git/git-visuals.html">
@@ -237,7 +249,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../lab/lab01/lab01.html">
-   Lab Session 1: GitHub &amp; The Shell
+   Lab Session 1: Git &amp; The Shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lab/lab02/lab02.html">
+   Lab Session 2: Dotfiles, Branches, Conflics and GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lab/lab03/lab03.html">
+   Lab Session 3: GitHub Continued, Pull Requests
   </a>
  </li>
 </ul>
@@ -914,7 +936,7 @@ for_type_by_name(type_module, type_name, func=None) method of IPython.core.forma
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./lectures/intro-jupyter"
         },
         predefinedOutput: true

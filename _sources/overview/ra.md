@@ -1,10 +1,10 @@
 # Reading Assignments
 
-Every week, each student is ask to read and discuss a series of reading assignments. The topics of the reading assignments include reproducibitity in science, open source practices, and applications to climate science, between others. 
+Every week, each student is asked to read and discuss a series of reading assignments. The topics of the reading assignments include reproducibitity in science, open source practices, and applications to climate science, among others. 
 
-You have to submit a total of two paragraphs per each separate article. The first is a summary paragraph and the second must highlight an important idea of the reading. This last one can be focused in something that catched your attention and you would like to expand a little bit more. You are more than welcome to orient this second paragraph into something related to your own research or area of interest. A good lenght for each one of the paragraphs is between 80 and 120 words
+You have to submit a total of two paragraphs per each separate article. The first is a summary paragraph and the second must highlight an important idea of the reading. This last one can be focused in something that caught your attention and you would like to expand a little bit more. You are more than welcome to orient this second paragraph into something related to your own research or area of interest. A good length for each one of the paragraphs is between 80 and 120 words.
 
-You will submit your reading assignments in bCourses. Reading assignments will be due every Wednesday at 9pm (Exception: the first one will be due _Thursday Jan 26_). No later reading assignments will be accepted unless there is a medical exception. In that case, you will need to submit in Ed a private note to the instructors with a medical proof showing that you are unable to complete the assignment. 
+You will submit your reading assignments in bCourses. Reading assignments will be due every Wednesday at 9pm (Exception: the first one will be due _Thursday Jan 26_). No late reading assignments will be accepted unless there is a medical situation or other documented major emergency. In that case, you will need to submit in Ed a private note to the instructors with a supporting evidence showing that you are unable to complete the assignment. 
 
 You can drop two readings without need of justification. Notice that this applies to INDIVIDUAL readings. For example, if the weekly reading consists of 4 papers, you can drop a maximum of two of them. If you drop two readings in one week, you cannot drop any other one without penalty. 
 
@@ -20,8 +20,18 @@ Each paragraph per reading assignment gives 1 point (a total of 2 per reading). 
 
 * #3, due Feb 8, 2023: Core concepts and The Reinhart and Rogoff Controversy
     - [Barba 2018, Terminologies for Reproducible Research](https://arxiv.org/abs/1802.03311)
-    - [The Reinhart and Rogoff Controversy: A Summing Up](https://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up)
+    - The Reinhart and Rogoff Controversy. Read the article in [The Conversation](https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646) and the [report article](http://peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/WP322.pdf) with the critique to the original paper. For these two articles, you just need to write two paragraphs instead of four. 
 
+* #4, due Feb 15, 2023: Reproducibility and Computational Challenges in Physics
+    - [The Limits of Reproducibility in Numerical Simulation](https://ieeexplore-ieee-org.libproxy.berkeley.edu/document/5719578).
+    - [Mesnard and Barba 2017, Reproducible and Replicable Computational Fluid Dynamics: It’s Harder Than You Think](https://ieeexplore.ieee.org/document/8012284).
+
+* #5. due Feb 22, 2023: Jupyter in Computational Research
+    - [Granger and Pérez 2021, Jupyter: Thinking and Storytelling With Code and Data](https://ieeexplore.ieee.org/document/9387490).
+    - [Using Jupyter for Reproducible Scientific Workflows](https://ieeexplore.ieee.org/document/9325550).
+    - [Jupyter in Computational Science](https://ieeexplore.ieee.org/document/9387474).
+    - [Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks](http://dx.plos.org/10.1371/journal.pcbi.1007007).
+	
 
 Future reading assignments
 
@@ -35,28 +45,12 @@ Future reading assignments
     - [Schwab, M., Karrenbach, N., Claerbout, J. (2000) Making scientific computations reproducible, Comp. Sci. Eng. 2(6):61–67, doi: 10.1109/5992.881708](https://ieeexplore.ieee.org/document/881708).
     - [Reproducible Research, by the Yale Law School Roundtable on Data and Code Sharing, Comp. Sci. Eng. 12(5): 8–13 (Sept.-Oct. 2010), doi:10.1109/mcse.2010.113](https://ieeexplore.ieee.org/document/5562471).
 
-* Jupyter in Computational Research
-    - [Granger and Pérez 2021, Jupyter: Thinking and Storytelling With Code and Data](https://ieeexplore.ieee.org/document/9387490).
-    - [Using Jupyter for Reproducible Scientific Workflows](https://ieeexplore.ieee.org/document/9325550).
-    - [Jupyter in Computational Science](https://ieeexplore.ieee.org/document/9387474).
-    - [Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks](http://dx.plos.org/10.1371/journal.pcbi.1007007).
-
-
-* Computational challenges
-    - [The Limits of Reproducibility in Numerical Simulation](https://ieeexplore-ieee-org.libproxy.berkeley.edu/document/5719578).
-    - [Clementi and Barba 2021, Reproducible validation and replication studies in nanoscale physics](https://royalsocietypublishing.org/doi/10.1098/rsta.2020.0068).
-
 
 * Open Source Software and Open Science - these are four easy "ten simple rules for...":
     - [the Open Development of Scientific Software](http://dx.plos.org/10.1371/journal.pcbi.1002802).
     - [documenting scientific software](http://dx.plos.org/10.1371/journal.pcbi.1006561).
     - [helping newcomers become contributors to open projects](http://dx.plos.org/10.1371/journal.pcbi.1007296).
     - [Cultivating Open Science and Collaborative R&D](http://dx.plos.org/10.1371/journal.pcbi.1003244).
-
-
-* Computational challenges
-    - [Mesnard and Barba 2017, Reproducible and Replicable Computational Fluid Dynamics: It’s Harder Than You Think](https://ieeexplore.ieee.org/document/8012284).
-    - [Mesnard and Barba 2020, Reproducible Workflow on a Public Cloud for Computational Fluid Dynamics](https://ieeexplore.ieee.org/document/8842605).
 
 
 * Open Source and Open Science

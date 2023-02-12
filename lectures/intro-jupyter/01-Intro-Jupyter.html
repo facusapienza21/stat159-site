@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../../overview/overview.html">
+                <a class="reference internal" href="../../index.html">
                     Statistics 159/259, Spring 2023 Course Summary
                 </a>
             </li>
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../overview/syllabus.html">
-   Syllabus for Statistics 159/259: Reproducible and Collaborative Statistical Data Science
+   Syllabus
   </a>
  </li>
  <li class="toctree-l1">
@@ -152,6 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../intro-git/Git-Tutorial.html">
    An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro-git/intro.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../intro-git/git-visuals.html">
@@ -237,7 +249,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../lab/lab01/lab01.html">
-   Lab Session 1: GitHub &amp; The Shell
+   Lab Session 1: Git &amp; The Shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lab/lab02/lab02.html">
+   Lab Session 2: Dotfiles, Branches, Conflics and GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lab/lab03/lab03.html">
+   Lab Session 3: GitHub Continued, Pull Requests
   </a>
  </li>
 </ul>
@@ -1114,8 +1136,8 @@ e^x=\sum_{i=0}^\infty \frac{1}{i!}x^i
 </pre></div>
 </div>
 <p>to produce the Lorenz equations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cbeb38c7-ef0a-4163-b830-654114fe578f">
-<span class="eqno">(1)<a class="headerlink" href="#equation-cbeb38c7-ef0a-4163-b830-654114fe578f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a5b04c3-55ab-4346-a642-6fc8d283b0d7">
+<span class="eqno">(1)<a class="headerlink" href="#equation-2a5b04c3-55ab-4346-a642-6fc8d283b0d7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \dot{x} &amp; = \sigma(y-x) \\
 \dot{y} &amp; = \rho x - y - xz \\
 \dot{z} &amp; = -\beta z + xy
@@ -1135,7 +1157,7 @@ e^x=\sum_{i=0}^\infty \frac{1}{i!}x^i
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./lectures/intro-jupyter"
         },
         predefinedOutput: true

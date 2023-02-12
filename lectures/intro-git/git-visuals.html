@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="An overview of Jupyter tools" href="../intro-jupyter/Index.html" />
-    <link rel="prev" title="An interactive Git Tutorial: the tool you didn’t know you needed" href="Git-Tutorial.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,7 +108,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../../overview/overview.html">
+                <a class="reference internal" href="../../index.html">
                     Statistics 159/259, Spring 2023 Course Summary
                 </a>
             </li>
@@ -150,6 +150,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="Git-Tutorial.html">
    An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
@@ -235,7 +247,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../lab/lab01/lab01.html">
-   Lab Session 1: GitHub &amp; The Shell
+   Lab Session 1: Git &amp; The Shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lab/lab02/lab02.html">
+   Lab Session 2: Dotfiles, Branches, Conflics and GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../lab/lab03/lab03.html">
+   Lab Session 3: GitHub Continued, Pull Requests
   </a>
  </li>
 </ul>
@@ -985,7 +1007,7 @@ git slog2 --all --author-date-order
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./lectures/intro-git"
         },
         predefinedOutput: true
@@ -1000,11 +1022,11 @@ git slog2 --all --author-date-order
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Git-Tutorial.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">An interactive Git Tutorial: the tool you didn’t know you needed</p>
+            <p class="prev-next-title">Introduction</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../intro-jupyter/Index.html" title="next page">

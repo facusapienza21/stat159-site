@@ -108,7 +108,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="overview.html">
+                <a class="reference internal" href="../index.html">
                     Statistics 159/259, Spring 2023 Course Summary
                 </a>
             </li>
@@ -150,6 +150,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lectures/intro-git/Git-Tutorial.html">
    An interactive Git Tutorial: the tool you didn’t know you needed
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/intro-git/intro.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lectures/intro-git/git-visuals.html">
@@ -235,7 +247,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lab/lab01/lab01.html">
-   Lab Session 1: GitHub &amp; The Shell
+   Lab Session 1: Git &amp; The Shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab/lab02/lab02.html">
+   Lab Session 2: Dotfiles, Branches, Conflics and GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab/lab03/lab03.html">
+   Lab Session 3: GitHub Continued, Pull Requests
   </a>
  </li>
 </ul>
@@ -532,7 +554,7 @@ title="Print to PDF"
 <p><strong>Statistics 159/259: Reproducible and Collaborative Statistical Data Science</strong></p>
 <section id="textbook">
 <h2>Textbook<a class="headerlink" href="#textbook" title="Permalink to this headline">#</a></h2>
-<p>While not strictly a textbook for this course, we will rely heavily on the excellent, openly licensed: <a class="reference external" href="https://merely-useful.tech/py-rse">Research software engineering in Python</a>. More resources are listed in the <a class="reference internal" href="overview.html"><span class="doc std std-doc">course overview page</span></a>.</p>
+<p>While not strictly a textbook for this course, we will rely heavily on the excellent, openly licensed: <a class="reference external" href="https://merely-useful.tech/py-rse">Research software engineering in Python</a>. More resources are listed in the <span class="xref myst">course overview page</span>.</p>
 </section>
 <section id="administrativia">
 <h2>Administrativia<a class="headerlink" href="#administrativia" title="Permalink to this headline">#</a></h2>
@@ -653,7 +675,7 @@ benefit from their support, please apply online at https://dsp.berkeley.edu.</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./overview"
         },
         predefinedOutput: true
