@@ -263,6 +263,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../appendix/rtc.html">
+   Real time collaboration (RTC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../appendix/contribute.html">
+   Contribute
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav></div>
@@ -431,7 +448,7 @@ title="Print to PDF"
 <p><img alt="" src="../../_images/masterbranch.png" /></p>
 <!-- offline: 
 <img src="https://raw.github.com/fperez/reprosw/master/fig/masterbranch.png" >
---><p>There can be multiple branches alive at any point in time; the working directory is the state of a special pointer called HEAD.  In this example there are two branches, <em>master</em> and <em>testing</em>, and <em>testing</em> is the currently active branch since it’s what HEAD points to:</p>
+--><p>There can be multiple branches alive at any point in time; the working directory is the state of a special pointer called HEAD.  In this example there are two branches, <em>master</em> (now <em>main</em>) and <em>testing</em>, and <em>testing</em> is the currently active branch since it’s what HEAD points to:</p>
 <p><img alt="" src="../../_images/HEAD_testing.png" /></p>
 <!-- offline: 
 <img src="https://raw.github.com/fperez/reprosw/master/fig/HEAD_testing.png" >
@@ -445,7 +462,7 @@ title="Print to PDF"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
 </pre></div>
 </div>
-<p>We are now going to try two different routes of development: on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch we will add one file and on the <code class="docutils literal notranslate"><span class="pre">experiment</span></code> branch, which we will create, we will add a different one.  We will then merge the experimental branch into <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
+<p>We are now going to try two different routes of development: on the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch we will add one file and on the <code class="docutils literal notranslate"><span class="pre">experiment</span></code> branch, which we will create, we will add a different one.  We will then merge the experimental branch into <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git switch -c experiment
 </pre></div>
 </div>
