@@ -125,13 +125,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../overview/ra.html">
-   Reading Assignments
+  <a class="reference internal" href="../../overview/syllabus.html">
+   Syllabus
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../overview/syllabus.html">
-   Syllabus
+  <a class="reference internal" href="../../overview/homework.html">
+   Homeworks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../overview/ra.html">
+   Reading Assignments
   </a>
  </li>
  <li class="toctree-l1">
@@ -146,11 +151,6 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Git-Tutorial.html">
-   An interactive Git Tutorial: the tool you didn’t know you needed
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="intro.html">
    Git
@@ -186,71 +186,48 @@ const thebe_selector_output = ".output, .cell_output"
      Conflict management
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="git-visuals.html">
+     Git Visuals
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="git-visuals.html">
-   Git Visuals
-  </a>
- </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../intro-jupyter/Index.html">
    An overview of Jupyter tools
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">
+     A quick, practical intro to the Jupyter Notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">
+     IPython: beyond plain Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">
+     Custom Display Logic
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">
-   A quick, practical intro to the Jupyter Notebook
+  <a class="reference internal" href="../modularity/modularity.html">
+   Modularity
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">
-   IPython: beyond plain Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">
-   Custom Display Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/04-Rich-Output.html">
-   Rich Output
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/05-widgets-interact.html">
-   Widgets without writing widgets: interact
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../West_Coast_HeatWave_Basic.html">
-   Satellite sea surface temperatures along the West Coast of the United States during the 2014–2016 northeast Pacific marine heat wave
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../climate-data.html">
-   Climate, oceans and data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../environments/conda-envs.html">
-   A quick guide to conda environments on our JupyterHub
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../matplotlib_beyond_basics.html">
-   Matplotlib: Beyond the basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../documentation.html">
-   Documentation, JupyterBook and Github Pages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../data-serialization.html">
-   Data Serialization
+  <a class="reference internal" href="../environments/environments.html">
+   Environments
   </a>
  </li>
 </ul>
@@ -509,7 +486,7 @@ title="Print to PDF"
 <h1>Local, single-user, linear workflow<a class="headerlink" href="#local-single-user-linear-workflow" title="Permalink to this headline">#</a></h1>
 <section id="directed-acyclic-graphs-dag">
 <h2>Directed Acyclic Graphs (DAG)<a class="headerlink" href="#directed-acyclic-graphs-dag" title="Permalink to this headline">#</a></h2>
-<p>A fundamental concept in git is the idea of a <em>commit</em>. A commit is a snapshot of a work at a point in time</p>
+<p>The fundamental unit of information in git is what is called a <em>commit</em>. A commit is a snapshot of a work at a point in time. Now, for version control systems we don’t want to have just one snapshot of our work, but instead we want many of them. Furthermore, instead of a linear sequence of snapshots we may imagine having multiple lines or branches of snapshots including different versions of our project. These commits are then organized in a directed acyclic graph, as the one shown in the following picture.</p>
 <!-- offline: 
 ![](images/commit_anatomy.png)
 
@@ -537,7 +514,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Every small change we make on the previus text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
+<p>Every small change we make on the previous text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data2</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;Some more text in my paper...&#39;</span>
@@ -616,24 +593,24 @@ See &#39;git help git&#39; for an overview of the system.
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can execute comands in bash from a Jupyter notebook by adding the <code class="docutils literal notranslate"><span class="pre">!</span></code> in front. You can also add the magic <code class="docutils literal notranslate"><span class="pre">%%bash</span></code> at the top of the cell to indicate that all the code in the cell must be executed in the shell.</p>
+<p>You can execute commands in bash from a Jupyter notebook by adding the <code class="docutils literal notranslate"><span class="pre">!</span></code> in front. You can also add the magic <code class="docutils literal notranslate"><span class="pre">%%bash</span></code> at the top of the cell to indicate that all the code in the cell must be executed in the shell.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If well you can do most of these following git operations from a notebook, we actually recommend you to execute this commands directly from the shell.</p>
+<p>If well you can do most of the following git operations from a notebook, we actually recommend you to execute this commands directly from the shell.</p>
 </div>
-<p>First we create an empty folder and let’s initialize it as a git repository. From your terminal, run</p>
+<p>First we create an empty folder and then we initialize it as a git repository. From your terminal, run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init <span class="nb">test</span>
 </pre></div>
 </div>
-<p>Let’s see at what git did. Let’s move to this folder and use the listing function to show all the files and directories inside the test repository <code class="docutils literal notranslate"><span class="pre">test</span></code>:</p>
+<p>Let’s see what git just did. Move inside to this folder and use the listing function to show all the files and directories inside the test repository <code class="docutils literal notranslate"><span class="pre">test</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nb">test</span> 
 ls -la
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>What makes <code class="docutils literal notranslate"><span class="pre">test</span></code> a repository? If you pay attention to what is inside the folder, you will see an especial folder called <code class="docutils literal notranslate"><span class="pre">.git</span></code>.</p>
+<p>What makes <code class="docutils literal notranslate"><span class="pre">test</span></code> a repository? If you pay attention to what is inside the folder, you will see an especial folder called <code class="docutils literal notranslate"><span class="pre">.git</span></code>. Here is where all the information that git is using to version control your files belongs. If you delete this folder, then your repository will pass to be a simple folder with no version control capabilities.</p>
 </div>
 <p>Now let’s edit our first file in the test directory with a text editor. We can also create a new text file with the next command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;My first bit of text&quot;</span> &gt; file1.txt
@@ -647,7 +624,7 @@ ls -la
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
 </pre></div>
 </div>
-<p>The next stepe in to <strong>commit</strong> our changes to permanently record our changes in git’s database. For now, we are <em>always</em> going to call <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> either with the <code class="docutils literal notranslate"><span class="pre">-a</span></code> option <em>or</em> with specific filenames (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">file1</span> <span class="pre">file2...</span></code>).  This delays the discussion of an aspect of git called the <em>index</em> (often referred to also as the ‘staging area’) that we will cover later.  Most everyday work in regular scientific practice doesn’t require understanding the extra moving parts that the index involves, so on a first round we’ll bypass it.  Later on we will discuss how to use it to achieve more fine-grained control of what and how git records our actions.</p>
+<p>The next step is to <strong>commit</strong> our changes to permanently record our changes in git’s database. For now, we are <em>always</em> going to call <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> either with the <code class="docutils literal notranslate"><span class="pre">-a</span></code> option <em>or</em> with specific filenames (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">file1</span> <span class="pre">file2...</span></code>).  This delays the discussion of an aspect of git called the <em>index</em> (often referred to also as the <em>staging area</em>) that we will cover later.  Most everyday work in regular scientific practice doesn’t require understanding the extra moving parts that the index involves, so on a first round we’ll bypass it.  Later on we will discuss how to use it to achieve more fine-grained control of what and how git records our actions.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -a -m<span class="s2">&quot;This is our first commit&quot;</span>
 </pre></div>
 </div>
@@ -706,7 +683,7 @@ ls -la
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -a -m<span class="s2">&quot;I have made great progress on this critical matter.&quot;</span>
 </pre></div>
 </div>
-<p>While <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> is used to add fils to the list git tracks, we must also tell it if we want their  names to change or for it to stop tracking them.  In familiar Unix fashion, the <code class="docutils literal notranslate"><span class="pre">mv</span></code> and <code class="docutils literal notranslate"><span class="pre">rm</span></code> git commands do precisely this:</p>
+<p>While <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> is used to add files to the list git tracks, we must also tell it if we want their  names to change or for it to stop tracking them.  In familiar Unix fashion, the <code class="docutils literal notranslate"><span class="pre">mv</span></code> and <code class="docutils literal notranslate"><span class="pre">rm</span></code> git commands do precisely this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git mv file1.txt file-newname.txt
 git status
 </pre></div>

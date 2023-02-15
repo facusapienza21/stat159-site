@@ -125,13 +125,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../overview/ra.html">
-   Reading Assignments
+  <a class="reference internal" href="../../overview/syllabus.html">
+   Syllabus
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../overview/syllabus.html">
-   Syllabus
+  <a class="reference internal" href="../../overview/homework.html">
+   Homeworks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../overview/ra.html">
+   Reading Assignments
   </a>
  </li>
  <li class="toctree-l1">
@@ -146,11 +151,6 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Git-Tutorial.html">
-   An interactive Git Tutorial: the tool you didn’t know you needed
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="intro.html">
    Git
@@ -186,71 +186,48 @@ const thebe_selector_output = ".output, .cell_output"
      Conflict management
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="git-visuals.html">
+     Git Visuals
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="git-visuals.html">
-   Git Visuals
-  </a>
- </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../intro-jupyter/Index.html">
    An overview of Jupyter tools
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">
+     A quick, practical intro to the Jupyter Notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">
+     IPython: beyond plain Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">
+     Custom Display Logic
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">
-   A quick, practical intro to the Jupyter Notebook
+  <a class="reference internal" href="../modularity/modularity.html">
+   Modularity
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">
-   IPython: beyond plain Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">
-   Custom Display Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/04-Rich-Output.html">
-   Rich Output
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-jupyter/05-widgets-interact.html">
-   Widgets without writing widgets: interact
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../West_Coast_HeatWave_Basic.html">
-   Satellite sea surface temperatures along the West Coast of the United States during the 2014–2016 northeast Pacific marine heat wave
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../climate-data.html">
-   Climate, oceans and data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../environments/conda-envs.html">
-   A quick guide to conda environments on our JupyterHub
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../matplotlib_beyond_basics.html">
-   Matplotlib: Beyond the basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../documentation.html">
-   Documentation, JupyterBook and Github Pages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../data-serialization.html">
-   Data Serialization
+  <a class="reference internal" href="../environments/environments.html">
+   Environments
   </a>
  </li>
 </ul>
@@ -506,13 +483,13 @@ git config --global user.email <span class="s2">&quot;Fernando.Perez@berkeley.ed
 <span class="o">%</span><span class="n">ghscopedcreds</span>
 </pre></div>
 </div>
-<p>For convinience, we have added a notebook with this cell and some further explanation in the <code class="docutils literal notranslate"><span class="pre">shared</span></code> folder in your JupyterHub session. You can copy this notebook in your home directory and use it everytime you need to authenticate with GitHub. ALternatively, you can run the following command in your terminal</p>
+<p>For convinience, we have added a notebook with this cell and some further explanation in the <code class="docutils literal notranslate"><span class="pre">shared</span></code> folder in your JupyterHub session. You can copy this notebook in your home directory and use it every time you need to authenticate with GitHub. Alternatively, you can run the following command in your terminal</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>github-app-user-auth
 </pre></div>
 </div>
-<p>It should give you a link to go to, and a code to input into the web page when that link is opened. Open the link, enter the code there. Grant access to the device in the web page, and you’re done!</p>
-<p>The first time you do this you need to go to the configuration page and manually configure which repos you’ll be using (this will require a bit more manual maintenance through the semester).</p>
-<p>Authentication is valid for 8 hours, and once it expires, this process will need to be repeated, <em>except for the first step</em>. In the future, we might have a web app or other process to make this less painful. However, keeping the length of this session limited drastically helps with security too.</p>
+<p>This will display a link and a code to input into the website you access with the link. Open the link and enter the code there. Grant access to the device in the web page, and you’re done!</p>
+<p>The first time you do this you need to go to the configuration page and manually configure which repositories you will be using (this will require a bit more manual maintenance through the semester).</p>
+<p>Authentication is valid for 8 hours, and once it expires, this process will need to be repeated, <em>except for the first step</em>. In the future, we might have a web application or other process to make this less painful. However, keeping the length of this session limited drastically helps with security too.</p>
 <p>Later, you can see what repositories you’ve given it access to by visiting <a class="reference external" href="https://github.com/settings/installations">your GitHub installations page</a>.</p>
 </section>
 </section>
