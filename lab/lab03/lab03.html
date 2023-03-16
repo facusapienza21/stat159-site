@@ -1,10 +1,13 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Lab Session 3: GitHub Continued, Pull Requests &#8212; Collaborative and Reproducible Data Science</title>
   
@@ -16,18 +19,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -35,17 +38,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -63,530 +65,87 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Lab Session 4: Modularization, Environments, Binder" href="../lab04/lab04.html" />
     <link rel="prev" title="Lab Session 2: Dotfiles, Branches, Conflics and GitHub" href="../lab02/lab02.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
   <label class="overlay overlay-primary" for="__primary"></label>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
   <label class="overlay overlay-secondary" for="__secondary"></label>
-
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-      
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
+</form></div>
   </div>
-
   
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fa-solid fa-bars"></span>
-  </label>
-  <div id="navbar-start">
-    
-    
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
-
-<a class="navbar-brand logo" href="../../index.html">
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image">
-  
-  
-</a>
-    
-  </div>
-
-  
-  <div class="col-lg-9 navbar-header-items">
-    <div id="navbar-center" class="mr-auto">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/schedule.html">
-                        Weekly Plan
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/syllabus.html">
-                        Syllabus
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/homework.html">
-                        Homeworks
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/ra.html">
-                        Reading Assignments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/references.html">
-                        Textbook and Supporting Materials
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/intro-git/intro.html">
-                        Git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/intro-jupyter/Index.html">
-                        An overview of Jupyter tools
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/modularity/modularity.html">
-                        Modularity
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/environments/environments.html">
-                        Environments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/testing/index.html">
-                        Testing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/climate-xarray/index.html">
-                        Climate and Xarray
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../intro/intro.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab00/lab00.html">
-                        Lab Session 0 - Introduction to Python
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab01/lab01.html">
-                        Lab Session 1: Git & The Shell
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab02/lab02.html">
-                        Lab Session 2: Dotfiles, Branches, Conflics and GitHub
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        Lab Session 3: GitHub Continued, Pull Requests
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab04/lab04.html">
-                        Lab Session 4: Modularization, Environments, Binder
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab05/lab05.html">
-                        Lab Session 5: Testing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab06/lab06.html">
-                        Lab Session 6: Climate data and xarray
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../appendix/rtc.html">
-                        Real time collaboration (RTC)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../appendix/local-installation.html">
-                        Local Installation
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../appendix/contribute.html">
-                        Contribute
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
-            
-    </ul>
-</nav>
-      </div>
-      
-    </div>
-
-    <div id="navbar-end">
-      
-        <div class="navbar-end-item navbar-persistent--container">
-          
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-        </div>
-      
-      
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul>
-      </div>
-      
-    </div>
-  </div>
-
-
-  
-  
-    <div class="navbar-persistent--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-    </div>
-  
-
-  
-  <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fa-solid fa-outdent"></span>
-  </label>
-  
-
-</div>
-  </nav>
-  
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       <div class="bd-sidebar-primary bd-sidebar">
         
+
   
   <div class="sidebar-header-items sidebar-primary__section">
     
     
-      <div class="sidebar-header-items__center">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/schedule.html">
-                        Weekly Plan
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/syllabus.html">
-                        Syllabus
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/homework.html">
-                        Homeworks
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/ra.html">
-                        Reading Assignments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../overview/references.html">
-                        Textbook and Supporting Materials
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/intro-git/intro.html">
-                        Git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/intro-jupyter/Index.html">
-                        An overview of Jupyter tools
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/modularity/modularity.html">
-                        Modularity
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/environments/environments.html">
-                        Environments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/testing/index.html">
-                        Testing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../lectures/climate-xarray/index.html">
-                        Climate and Xarray
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../intro/intro.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab00/lab00.html">
-                        Lab Session 0 - Introduction to Python
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab01/lab01.html">
-                        Lab Session 1: Git & The Shell
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab02/lab02.html">
-                        Lab Session 2: Dotfiles, Branches, Conflics and GitHub
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        Lab Session 3: GitHub Continued, Pull Requests
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab04/lab04.html">
-                        Lab Session 4: Modularization, Environments, Binder
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab05/lab05.html">
-                        Lab Session 5: Testing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../lab06/lab06.html">
-                        Lab Session 6: Climate data and xarray
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../appendix/rtc.html">
-                        Real time collaboration (RTC)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../appendix/local-installation.html">
-                        Local Installation
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../appendix/contribute.html">
-                        Contribute
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
-            
-    </ul>
-</nav>
-      </div>
-      
-      </div>
     
-
-    
-    
-    <div class="sidebar-header-items__end">
-      
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul>
-      </div>
-      
-    </div>
     
   </div>
-
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item">
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
   
-
 
 <a class="navbar-brand logo" href="../../index.html">
-
   
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
-  
-
-  
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image">
-  
-  
-</a>
-    </div>
-    <div class="sidebar-start-items__item">
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
-    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -615,7 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../lectures/intro-git/git-visuals.html">Git Visuals</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../lectures/intro-jupyter/Index.html">An overview of Jupyter tools</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lectures/collaboration/index.html">Collaboration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lectures/collaboration/rtc.html">Real time collaboration (RTC)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lectures/intro-jupyter/Index.html">An overview of Jupyter tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../lectures/intro-jupyter/01-Intro-Jupyter.html">A quick, practical intro to the Jupyter Notebook</a></li>
 
 
@@ -628,7 +191,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/modularity/modularity.html">Modularity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/environments/environments.html">Environments</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../lectures/testing/index.html">Testing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lectures/testing/index.html">Testing</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../lectures/testing/building-blocks.html">Building Blocks</a></li>
 
 
@@ -638,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../lectures/climate-xarray/index.html">Climate and Xarray</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lectures/climate-xarray/index.html">Climate and Xarray</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../lectures/climate-xarray/climate-data.html">Climate, oceans and data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../lectures/climate-xarray/xarray.html">Introduction to Xarray</a></li>
 
@@ -658,63 +221,104 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../appendix/rtc.html">Real time collaboration (RTC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/local-installation.html">Local Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/contribute.html">Contribute</a></li>
 </ul>
 
     </div>
-</nav>
+</nav></div>
     </div>
-  </div>
   
-
   
-  <div class="sidebar-end-items sidebar-primary__section">
-    <div class="sidebar-end-items__item">
-    </div>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
-
   
   <div id="rtd-footer-container"></div>
 
+
       </div>
+      
       <main id="main-content" class="bd-main">
         
         
 
 <div class="sbt-scroll-pixel-helper"></div>
 
-        <div class="bd-content">
-          <div class="bd-article-container">
-            
-            <div class="bd-header-article">
-                
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
-            <span class="fa-solid fa-bars"></span>
-        </label>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lab/lab03/lab03.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
 </div>
 
+
+
+
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
@@ -725,53 +329,34 @@ title="Fullscreen mode"
 </button>
 
 
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <ul class="dropdown-menu">
-      <li><a href="../../_sources/lab/lab03/lab03.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</a>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
       
-      <li>
-<button onclick="printPdf(this)"
-  class="btn btn-sm dropdown-item"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</a>
-      
-  </ul>
-</div>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
-            <span class="fa-solid fa-list"></span>
-        </label>
     </div>
+  
 </div>
-            </div>
-            
-            
+</div>
+              
+              
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>Lab Session 3: GitHub Continued, Pull Requests</h1>
@@ -784,92 +369,43 @@ title="Print to PDF"
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">
-   1. Collaborating on GitHub with a small team
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#simple-synchronization">
-     1.1  Simple Synchronization
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       *
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#github-with-conflicts">
-     1.2 GitHub with conflicts
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       *
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#working-directly-in-github">
-     1.3 Working directly in GitHub
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reconstructing-past-versions">
-   2. Reconstructing past versions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#restoring-old-versions">
-     2.1. Restoring old versions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recovering-deleted-files">
-     2.2. Recovering deleted files
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#forks-and-pull-requests">
-   3. Forks and Pull Requests
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     *
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#extra">
-   4. Extra
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">1. Collaborating on GitHub with a small team</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-synchronization">1.1  Simple Synchronization <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-with-conflicts">1.2 GitHub with conflicts <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directly-in-github">1.3 Working directly in GitHub</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstructing-past-versions">2. Reconstructing past versions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restoring-old-versions">2.1. Restoring old versions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovering-deleted-files">2.2. Recovering deleted files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forks-and-pull-requests">3. Forks and Pull Requests <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra">4. Extra</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
 
-            <article class="bd-article" role="main">
               
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="lab-session-3-github-continued-pull-requests">
-<h1>Lab Session 3: GitHub Continued, Pull Requests<a class="headerlink" href="#lab-session-3-github-continued-pull-requests" title="Permalink to this heading">#</a></h1>
+<h1>Lab Session 3: GitHub Continued, Pull Requests<a class="headerlink" href="#lab-session-3-github-continued-pull-requests" title="Permalink to this headline">#</a></h1>
 <blockquote>
 <div><p>Friday 02-10-2023, 9AM-11AM &amp; 12AM-2PM</p>
 <p>Instructor: <a class="reference external" href="https://statistics.berkeley.edu/people/facu-sapienza">Facundo Sapienza</a></p>
 </div></blockquote>
 <p>We encourage you to work in the following exercises with a partner. The exercises with the <code class="docutils literal notranslate"><span class="pre">*</span></code> are meant to be for two persons.</p>
 <section id="collaborating-on-github-with-a-small-team">
-<h2>1. Collaborating on GitHub with a small team<a class="headerlink" href="#collaborating-on-github-with-a-small-team" title="Permalink to this heading">#</a></h2>
+<h2>1. Collaborating on GitHub with a small team<a class="headerlink" href="#collaborating-on-github-with-a-small-team" title="Permalink to this headline">#</a></h2>
 <p>We are going to set up a shared collaboration with one partner (the person sitting next to you).  This will show the basic workflow of collaborating on a project with a small team where everyone have write privileges to the same repository.</p>
 <p>We will have two people, let’s call them Alice and Bob, sharing a repository.  Alice will be the owner of the repository and she will give Bob write privileges.</p>
 <section id="simple-synchronization">
-<h3>1.1  Simple Synchronization <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#simple-synchronization" title="Permalink to this heading">#</a></h3>
+<h3>1.1  Simple Synchronization <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#simple-synchronization" title="Permalink to this headline">#</a></h3>
 <p>We begin with a simple synchronization example, much like we just did in the previous lab, but now between <strong>two people</strong> instead of one person.</p>
 <ol class="arabic simple">
 <li><p>Alice creates a new repository in GitHub with some basic text files on it. For now, let’s make this repository hosted in Alice’s personal GitHub account and let’s make the repository public.</p></li>
@@ -895,7 +431,7 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="github-with-conflicts">
-<h3>1.2 GitHub with conflicts <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#github-with-conflicts" title="Permalink to this heading">#</a></h3>
+<h3>1.2 GitHub with conflicts <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#github-with-conflicts" title="Permalink to this headline">#</a></h3>
 <p>Follow the same workflow than before, but now try to induce a conflict. In order to induce a conflict,</p>
 <ol class="arabic simple">
 <li><p>Both Alice and Bob need to make changes in the same line of the text files and commit these changes.</p></li>
@@ -905,7 +441,7 @@ Are you tired of solving the issues during the merge? You can always do a <code 
 </ol>
 </section>
 <section id="working-directly-in-github">
-<h3>1.3 Working directly in GitHub<a class="headerlink" href="#working-directly-in-github" title="Permalink to this heading">#</a></h3>
+<h3>1.3 Working directly in GitHub<a class="headerlink" href="#working-directly-in-github" title="Permalink to this headline">#</a></h3>
 <p>So far we were using GitHub just to host our remote repository, but GitHub also allow us to make operations like quick changes, documenting issues or just viewing the state of our repository, including past versions.</p>
 <p>Explore a little bit your GitHub repository. Specifically,</p>
 <ol class="arabic simple">
@@ -918,11 +454,11 @@ Are you tired of solving the issues during the merge? You can always do a <code 
 </section>
 </section>
 <section id="reconstructing-past-versions">
-<h2>2. Reconstructing past versions<a class="headerlink" href="#reconstructing-past-versions" title="Permalink to this heading">#</a></h2>
+<h2>2. Reconstructing past versions<a class="headerlink" href="#reconstructing-past-versions" title="Permalink to this headline">#</a></h2>
 <p>Sometimes we make accidental changes to some of the files in a repository, or maybe we just want to comeback to a previous version. In any case, it is easy to restore or even recover old versions of files that have been track in a commit message.</p>
 <p>For these next examples, we are going to use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> command to restore past versions of a file. This can lead to some confusion, since this is the same command we use for changing branches. In a sense, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> does both the work of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">switch</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">restore</span></code>. You can do all the following exercises with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">restore</span></code> instead of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code>.</p>
 <section id="restoring-old-versions">
-<h3>2.1. Restoring old versions<a class="headerlink" href="#restoring-old-versions" title="Permalink to this heading">#</a></h3>
+<h3>2.1. Restoring old versions<a class="headerlink" href="#restoring-old-versions" title="Permalink to this headline">#</a></h3>
 <p>For this example, we are going to make modifications to one of the files in our repository and then recover some of the older versions.</p>
 <ol class="arabic simple">
 <li><p>Make more than one change in the same file in your repository, for example you can use write some new text inside <code class="docutils literal notranslate"><span class="pre">text.txt</span></code>. With <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;...&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">text.txt</span></code> you will print new lines at the end of <code class="docutils literal notranslate"><span class="pre">text.txt</span></code> (with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> you will just overwrite all the contents).</p></li>
@@ -939,7 +475,7 @@ Are you tired of solving the issues during the merge? You can always do a <code 
 <p>Observation: you can also see old versions of your files directly on GitHub, in case you need to inspect previous versions of files.</p>
 </section>
 <section id="recovering-deleted-files">
-<h3>2.2. Recovering deleted files<a class="headerlink" href="#recovering-deleted-files" title="Permalink to this heading">#</a></h3>
+<h3>2.2. Recovering deleted files<a class="headerlink" href="#recovering-deleted-files" title="Permalink to this headline">#</a></h3>
 <p>Now, let’s practice deleting and recovering an specific file</p>
 <ol class="arabic simple">
 <li><p>Remove one of the files in your test repository. You can also just create a new file and remove it. To do so, use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">&lt;file</span> <span class="pre">name&gt;</span></code>. You can take a look to this <a class="reference external" href="https://www.atlassian.com/git/tutorials/undoing-changes/git-rm">link</a> to see some flags you can add to this command.</p></li>
@@ -949,7 +485,7 @@ Are you tired of solving the issues during the merge? You can always do a <code 
 </section>
 </section>
 <section id="forks-and-pull-requests">
-<h2>3. Forks and Pull Requests <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#forks-and-pull-requests" title="Permalink to this heading">#</a></h2>
+<h2>3. Forks and Pull Requests <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#forks-and-pull-requests" title="Permalink to this headline">#</a></h2>
 <p>Sometimes is is useful to create a complete new copy of a repository and work on that before merging the new changes to the main repository. This is particularly when working with packages, big projects or just when we want to experiment a little bit having the version control capabilities without adding changes to the main repository. For these cases is when we want to use forks and then pull requests if we want to merge changes across repositories (or inside the repository too).</p>
 <p>If you are not familiar with the concept of pull requests, take a look to the <a class="reference external" href="https://merely-useful.tech/py-rse/git-advanced.html#git-advanced-pull-requests">pull request chapter</a> in the course book. The idea of a pull request is to merge a branch for any given repository to a branch of another repository.</p>
 <p>Let’s practice this following where we stopped with Alice and Bob example.</p>
@@ -964,7 +500,7 @@ Are you tired of solving the issues during the merge? You can always do a <code 
 <p>Repeat this but now change roles between Bob and Alice.</p>
 </section>
 <section id="extra">
-<h2>4. Extra<a class="headerlink" href="#extra" title="Permalink to this heading">#</a></h2>
+<h2>4. Extra<a class="headerlink" href="#extra" title="Permalink to this headline">#</a></h2>
 <p>If you already finished all the previous tasks, you are welcome to explore some more useful git commands!</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-show.html">show</a></p></li>
@@ -996,120 +532,69 @@ Are you tired of solving the issues during the merge? You can always do a <code 
     </script>
     <script>kernelName = 'python3'</script>
 
-            </article>
-            
+                </article>
+              
 
-            
-            
-            <footer class="bd-footer-article">
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="../lab02/lab02.html" title="previous page">
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lab02/lab02.html"
+       title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Lab Session 2: Dotfiles, Branches, Conflics and GitHub</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lab Session 2: Dotfiles, Branches, Conflics and GitHub</p>
       </div>
-  </a>
-  <a class='right-next' id="next-link" href="../lab04/lab04.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Lab Session 4: Modularization, Environments, Binder</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
+    </a>
+    <a class="right-next"
+       href="../lab04/lab04.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab Session 4: Modularization, Environments, Binder</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-            </footer>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">1. Collaborating on GitHub with a small team</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-synchronization">1.1  Simple Synchronization <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-with-conflicts">1.2 GitHub with conflicts <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directly-in-github">1.3 Working directly in GitHub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstructing-past-versions">2. Reconstructing past versions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restoring-old-versions">2.1. Restoring old versions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovering-deleted-files">2.2. Recovering deleted files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forks-and-pull-requests">3. Forks and Pull Requests <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra">4. Extra</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
-          
-          
-          
-            <div class="bd-sidebar-secondary bd-toc">
-              
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#collaborating-on-github-with-a-small-team">
-   1. Collaborating on GitHub with a small team
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#simple-synchronization">
-     1.1  Simple Synchronization
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       *
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#github-with-conflicts">
-     1.2 GitHub with conflicts
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       *
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#working-directly-in-github">
-     1.3 Working directly in GitHub
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reconstructing-past-versions">
-   2. Reconstructing past versions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#restoring-old-versions">
-     2.1. Restoring old versions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recovering-deleted-files">
-     2.2. Recovering deleted files
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#forks-and-pull-requests">
-   3. Forks and Pull Requests
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     *
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#extra">
-   4. Extra
-  </a>
- </li>
-</ul>
-
-</nav>
-</div>
-
-            </div>
-          
-          
-        </div>
-        <footer class="bd-footer-content">
-          <div class="bd-footer-content__inner">
-            
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1122,38 +607,36 @@ By Fernando Pérez and Facundo Sapienza
   
   <div class="footer-item">
     
-<p class="copyright">
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
 
-    &copy; Copyright 2022.<br>
-
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    <p class="last-updated">
-Last updated on None.<br>
-</p>
   </div>
   
   <div class="footer-item">
     
   </div>
   
-</div>
-          </div>
-        </footer>
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
         
 
       </main>
     </div>
   </div>
-
   
-    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
