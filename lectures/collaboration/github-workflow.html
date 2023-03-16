@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Configuration &#8212; Collaborative and Reproducible Data Science</title>
+    <title>Working in teams on GitHub &#8212; Collaborative and Reproducible Data Science</title>
   
   
   
@@ -60,11 +60,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/intro-git/configuration';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/collaboration/github-workflow';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Local, single-user, linear workflow" href="local.html" />
-    <link rel="prev" title="Git" href="intro.html" />
+    <link rel="next" title="Real time collaboration (RTC)" href="rtc.html" />
+    <link rel="prev" title="Collaboration" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -165,18 +165,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Git</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="local.html">Local, single-user, linear workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="branch.html">Local user, branching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="remote.html">Remotes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conflict.html">Conflict management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-visuals.html">Git Visuals</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-git/intro.html">Git</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro-git/configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-git/local.html">Local, single-user, linear workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-git/branch.html">Local user, branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-git/remote.html">Remotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-git/conflict.html">Conflict management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-git/git-visuals.html">Git Visuals</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../collaboration/index.html">Collaboration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../collaboration/github-workflow.html">Working in teams on GitHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collaboration/rtc.html">Real time collaboration (RTC)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Collaboration</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Working in teams on GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtc.html">Real time collaboration (RTC)</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../intro-jupyter/Index.html">An overview of Jupyter tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -279,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/lectures/intro-git/configuration.ipynb" target="_blank"
+      <li><a href="../../_sources/lectures/collaboration/github-workflow.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -361,7 +361,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Configuration</h1>
+    <h1>Working in teams on GitHub</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -371,7 +371,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convenient-credentials-management">Convenient credentials management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-habits-to-pick-up">Key habits to pick up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#good-atomic-commits">1. Good atomic commits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-commits-in-branches-that-address-one-problem-at-a-time">2. Group commits in branches that address one problem at a time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">3. Pull Requests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">4. Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussions">5. Discussions</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -383,35 +390,64 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="configuration">
-<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h1>
-<p>The minimal amount of configuration for git to work without pestering you is to tell it who you are. You should run a version of these commands in your shell:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Fernando Perez&quot;</span>
-git config --global user.email <span class="s2">&quot;Fernando.Perez@berkeley.edu&quot;</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="working-in-teams-on-github">
+<h1>Working in teams on GitHub<a class="headerlink" href="#working-in-teams-on-github" title="Permalink to this headline">#</a></h1>
+<p>Although we don’t need to became experts in git and Github, it is important to understand how it works and, more important, start developing good practices and workflows at the moment of working under version control with other people.</p>
+<p>A very common quote in the open source community is</p>
+<blockquote>
+<div><p>“Release early, release often”</p>
+</div></blockquote>
+<p>Why is this? Because this will provide feedback from the community that will furthermore help moving the software forward. This is very different than the secretive way many times traditional science tends to work. Not doing this encourages bad practices.</p>
+<p>Another popular quote knows as the Linus’s Law is</p>
+<blockquote>
+<div><p>“Given enough eyeballs, all bugs are shallow”.</p>
+</div></blockquote>
+<p>This is very similar to the other quote: with more people looking at more code, the changes of making big mistakes are smaller and the software becomes more robust. This doesn’t mean that our code will not have issues, but we are more likely to detect flaws in the design and implementation of the code when more people are looking at it.</p>
+<p>These two capture a key principle: share your work openly from as early as possible, and thus get more people to look at your work, and the result will be better.  Trick is - how do we put this in practice? The trick is to use</p>
+<ul class="simple">
+<li><p>Git, with remotes, connects your local workflow to the cloud.</p></li>
+<li><p>In the cloud, GitHub (and other similar services like GitLab) becomes your point for collaboration.</p></li>
+</ul>
+<p>In all this, <em>communication is key</em>. Git is only a technical tool that helps you manage a kind of data (the contents of your repository). It is not a replacement for working with humans - <strong>that’s your job!</strong></p>
+<div class="admonition-creating-a-better-scientific-community admonition">
+<p class="admonition-title">Creating a better scientific community </p>
+<p>Even when we motivate these practiced for scientific software, we believe these values of collaboration and openness can been widely applied across scientific disciples. Have you ever thought about sharing your ideas or even pre-prints to the community even before those are “ready” for publication. See for example <a class="reference external" href="https://terrytao.wordpress.com">Terence Tao Blog</a>.</p>
+</div>
+<section id="key-habits-to-pick-up">
+<h2>Key habits to pick up<a class="headerlink" href="#key-habits-to-pick-up" title="Permalink to this headline">#</a></h2>
+<p>Here we are going to make a few recommendations about good practices for project management when we are working with git and GitHub.</p>
+<section id="good-atomic-commits">
+<h3>1. Good atomic commits<a class="headerlink" href="#good-atomic-commits" title="Permalink to this headline">#</a></h3>
+<p>Just like the original word atomic that means <em>indivisible</em>, this means that we should make commits that express one single idea or implementation. This doesn’t necessarily means that we need to commit small changes, but instead each commit implements a new change. Also, we want this commit to have a short message. After the first line of the commit message, we can add a longer description. A general recommendation is to keep the first line of the commit message less than 50 characters. After that, we can enter an space and write more text to expand on the commit message, but the first line serves as a summary and is the one we will refer to most of the times. See <a class="reference external" href="https://preslav.me/2015/02/21/what-s-with-the-50-72-rule/">What’s with the 50/70 rule?</a> for more information about how to write good commit messages.</p>
+</section>
+<section id="group-commits-in-branches-that-address-one-problem-at-a-time">
+<h3>2. Group commits in branches that address one problem at a time<a class="headerlink" href="#group-commits-in-branches-that-address-one-problem-at-a-time" title="Permalink to this headline">#</a></h3>
+<p>Having multiple branches allow us to work in multiple problems at the same time, making atomic changes on each one of them as we make progress but also allowing different lines of work to progress independently. Having multiple branches allow us to explore the evolution of the progress much better and in a non-linear fashion. Remember that branches can always being merged, so eventually we can combine different stories of project into the same commit.</p>
+</section>
+<section id="pull-requests">
+<h3>3. Pull Requests<a class="headerlink" href="#pull-requests" title="Permalink to this headline">#</a></h3>
+<p>When ready for feedback, make a Pull Request (PR) for this work. When you are already to share your code with others, you don’t just update the main repository or code. Furthermore, you don’t just update one single commit at the time. Instead, we create what is know as a pull request. A pull request means that one user is <em>requesting</em> to some other users to <em>review</em> some changes and eventually approve those changes. An advantage of doing this is that GitHub allow us to maintain an communication between the parts in which feedback and comment can be done. Further changes can be implemented until the pull requests go approved. Also, think in cases where the new changes need to be tested before being incorporated. The moment for running and checking the tests is the PR, where we can also make the changes until all potential checks pass.</p>
+<p>As we mentioned before, a pull request opens a conversation between the part that is bringing the new implementation and the current maintainers of the software. Either for small and large groups, these parts could be composed by the same or different people. This is why your PR should summarize the overall purpose of the work.</p>
+<p>Some examples of pull requests can be found <a class="reference external" href="https://github.com/CryoInTheCloud/hub-image/pulls">here</a>. Notice you can see both open and closed (resolved) issues!</p>
+</section>
+<section id="issues">
+<h3>4. Issues<a class="headerlink" href="#issues" title="Permalink to this headline">#</a></h3>
+<p>When appropriate, create an open issue to track specific questions and problems to work on (see for example how a new, relatively small project like MyST <a class="reference external" href="https://github.com/executablebooks/jupyterlab-myst/issues">does it</a>). An issues is also atomic: it’s a message that address one single problem, question, concern or sometimes even new features that we want to implement. The goal of the issue is to start a conversation without code. You can see some examples of open and closed issues in the <a class="reference external" href="https://github.com/CryoInTheCloud/hub-image/issues">CryoInTheCloud</a> repository.</p>
+<p>You can <a class="reference external" href="https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue"><code class="docutils literal notranslate"><span class="pre">close</span> <span class="pre">#nn</span></code></a> issues via specific commits or in the merge commit of a PR.</p>
+<p>For this to work well, you need an <code class="docutils literal notranslate"><span class="pre">upstream</span></code> repository for the common work, and your personal <code class="docutils literal notranslate"><span class="pre">origin</span></code> one. For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> <span class="o">(</span>staging<span class="o">)</span>longs<span class="o">[</span>stat159<span class="o">]</span>&gt; git remote -v
+origin	git@github.com:fperez/datahub.git <span class="o">(</span>fetch<span class="o">)</span>
+origin	git@github.com:fperez/datahub.git <span class="o">(</span>push<span class="o">)</span>
+upstream	git@github.com:berkeley-dsep-infra/datahub.git <span class="o">(</span>fetch<span class="o">)</span>
+upstream	git@github.com:berkeley-dsep-infra/datahub.git <span class="o">(</span>push<span class="o">)</span>
 </pre></div>
 </div>
-<p>And while we’re at it, we also turn on the use of color, which is very useful</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global color.ui <span class="s2">&quot;auto&quot;</span>
-</pre></div>
-</div>
-<section id="convenient-credentials-management">
-<h2>Convenient credentials management<a class="headerlink" href="#convenient-credentials-management" title="Permalink to this headline">#</a></h2>
-<p>Next, we configure git so that we manage our credentials without having to manually type our passwords for each and every operation.</p>
-<p>For general users, Github offers in its help pages instructions on how to configure the credentials helper for <a class="reference external" href="https://help.github.com/articles/caching-your-github-password-in-git/#platform-mac">Mac OSX</a>, <a class="reference external" href="https://help.github.com/articles/caching-your-github-password-in-git/#platform-mac">Windows</a> and <a class="reference external" href="https://help.github.com/articles/caching-your-github-password-in-git/#platform-linux">Linux</a>.</p>
-<p>But in this document we will focus on configuring the <a class="reference external" href="https://github.com/yuvipanda/github-app-user-auth">github app for JupyterHub</a> developed by Berkeley’s Yuvi Panda. Our JupyterHub already has this app pre-installed, which makes it very convenient to push and pull securely from selected repositories.</p>
-<p>You will need to run this command from a cell of a Jupyter notebook</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gh_scoped_creds</span>
-<span class="o">%</span><span class="n">ghscopedcreds</span>
-</pre></div>
-</div>
-<p>For convinience, we have added a notebook with this cell and some further explanation in the <code class="docutils literal notranslate"><span class="pre">shared</span></code> folder in your JupyterHub session. You can copy this notebook in your home directory and use it every time you need to authenticate with GitHub. Alternatively, you can run the following command in your terminal</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>github-app-user-auth
-</pre></div>
-</div>
-<p>This will display a link and a code to input into the website you access with the link. Open the link and enter the code there. Grant access to the device in the web page, and you’re done!</p>
-<p>The first time you do this you need to go to the configuration page and manually configure which repositories you will be using (this will require a bit more manual maintenance through the semester).</p>
-<p>Authentication is valid for 8 hours, and once it expires, this process will need to be repeated, <em>except for the first step</em>. In the future, we might have a web application or other process to make this less painful. However, keeping the length of this session limited drastically helps with security too.</p>
-<p>Later, you can see what repositories you’ve given it access to by visiting <a class="reference external" href="https://github.com/settings/installations">your GitHub installations page</a>.</p>
+<p>This separates your personal workspace from that of the team, and it’s a good habit to get into even if you have direct commit rights to the group workspace.</p>
+</section>
+<section id="discussions">
+<h3>5. Discussions<a class="headerlink" href="#discussions" title="Permalink to this headline">#</a></h3>
+<p>For larger projects, it makes sense to have a forum where user and developers can ask questions. Eventually, these questions can trigger the creation of issues or even new code, but having a more informal mean of communication also helps to improve the quality of the software and also help newcomers to start interacting with a larger community of users. GitHub supports this forums thought <a class="reference external" href="https://docs.github.com/en/discussions/quickstart">GitHub Discussions</a>. Also some projects decide to use Discourse instead, see for example the <a class="reference external" href="https://discourse.jupyter.org">Jupyter Discourse</a>.</p>
+</section>
 </section>
 </section>
 
@@ -428,7 +464,7 @@ git config --global user.email <span class="s2">&quot;Fernando.Perez@berkeley.ed
         },
         kernelOptions: {
             name: "python3",
-            path: "./lectures/intro-git"
+            path: "./lectures/collaboration"
         },
         predefinedOutput: true
     }
@@ -444,20 +480,20 @@ git config --global user.email <span class="s2">&quot;Fernando.Perez@berkeley.ed
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Git</p>
+        <p class="prev-next-title">Collaboration</p>
       </div>
     </a>
     <a class="right-next"
-       href="local.html"
+       href="rtc.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Local, single-user, linear workflow</p>
+        <p class="prev-next-title">Real time collaboration (RTC)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -476,7 +512,14 @@ git config --global user.email <span class="s2">&quot;Fernando.Perez@berkeley.ed
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convenient-credentials-management">Convenient credentials management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-habits-to-pick-up">Key habits to pick up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#good-atomic-commits">1. Good atomic commits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-commits-in-branches-that-address-one-problem-at-a-time">2. Group commits in branches that address one problem at a time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">3. Pull Requests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">4. Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussions">5. Discussions</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
