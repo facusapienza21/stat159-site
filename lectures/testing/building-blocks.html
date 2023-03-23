@@ -140,8 +140,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/berkeley-logo-white.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/berkeley-logo-white.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -179,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../collaboration/rtc.html">Real time collaboration (RTC)</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-jupyter/Index.html">An overview of Jupyter tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-jupyter/Index.html">Jupyter Tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro-jupyter/01-Intro-Jupyter.html">A quick, practical intro to the Jupyter Notebook</a></li>
 
 
@@ -188,6 +188,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../intro-jupyter/02-Beyond-Plain-Python.html">IPython: beyond plain Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro-jupyter/03-Custom-Display-Logic.html">Custom Display Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-jupyter/04-Rich-Output.html">Rich Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-jupyter/05-widgets-interact.html">Widgets without writing widgets: interact</a></li>
+
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../modularity/modularity.html">Modularity</a></li>
@@ -209,6 +212,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../serialization/data-serialization.html">Data Serialization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../documentation/index.html">Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/documentation.html">Documentation, JupyterBook and Github Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/jupyter-book.html">Jupyter Book</a></li>
+
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labs</span></p>
 <ul class="nav bd-sidenav">
@@ -220,6 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../lab/lab04/lab04.html">Lab Session 4: Modularization, Environments, Binder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../lab/lab05/lab05.html">Lab Session 5: Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../lab/lab06/lab06.html">Lab Session 6: Climate data and xarray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lab/lab07/lab07.html">Lab Session 7: Jupyter Book</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -266,6 +276,53 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/UCB-stat-159-s23/site" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UCB-stat-159-s23/site/issues/new?title=Issue%20on%20page%20%2Flectures/testing/building-blocks.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -422,7 +479,7 @@ document.write(`
 <p>Let’s start by taking a look to some of the reasons why continously testing our code is a good prectice that produce better code and more reproducible too.</p>
 <section id="chaotic-systems-and-numerical-precision">
 <h2>1.1.  Chaotic systems and numerical precision<a class="headerlink" href="#chaotic-systems-and-numerical-precision" title="Permalink to this headline">#</a></h2>
-<p>We are going to play with the notebook <code class="docutils literal notranslate"><span class="pre">simple-numerical-chaos.ipynb</span></code>, <span class="xref myst">notebook</span> that you can find in this same directoy. Consider for example the following operation</p>
+<p>We are going to play with the notebook <code class="docutils literal notranslate"><span class="pre">simple-numerical-chaos.ipynb</span></code>, <a class="reference internal" href="simple-numerical-chaos.html"><span class="doc std std-doc">notebook</span></a> that you can find in this same directoy. Consider for example the following operation</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1e-16</span><span class="p">,</span> <span class="mf">1e-16</span>
@@ -477,7 +534,7 @@ in scientific computing.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can continue exploring this example in the <span class="xref myst">simple-numerical-chaos.ipynb notebook</span>.</p>
+<p>You can continue exploring this example in the <a class="reference internal" href="simple-numerical-chaos.html"><span class="doc std std-doc">simple-numerical-chaos.ipynb notebook</span></a>.</p>
 </div>
 </section>
 <section id="implementing-or-changing-features">
@@ -999,7 +1056,7 @@ By Fernando Pérez and Facundo Sapienza
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
