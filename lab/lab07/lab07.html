@@ -427,10 +427,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-create-your-first-book">Part 1: Create your first Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-add-some-extra-features">Part 2: Add some extra features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-publish-your-book-online">Part 3: Publish your book online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-keep-your-book-updated-with-gh-actions">Part 4: Keep your book updated with GH actions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-first-book">1. Create your first Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-some-extra-features">2. Add some extra features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-your-book-online">3. Publish your book online</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-to-keep-book-updated">4. Continuous Integration to keep book updated</a></li>
 </ul>
             </nav>
         </div>
@@ -450,39 +450,41 @@ document.write(`
 <li><p>03/24/2023</p></li>
 </ul>
 <p>Today we are going to construct and deploy our first Jupyter Book! This is an incredible tool that allow us to transform contents in our project such as Jupyter notebooks, markdown files and figures into <code class="docutils literal notranslate"><span class="pre">html</span></code> and <code class="docutils literal notranslate"><span class="pre">pdf</span></code> files that can be then shared or even hosted on the web. Even if you haven’t use it yet, you had been exposed to Jupyter Book during all the semester: the <a class="reference external" href="https://github.com/UCB-stat-159-s23/site">course website</a> is the Jupyter Book generated from the <a class="reference external" href="https://ucb-stat-159-s23.github.io/site/overview.html">site repository</a>.</p>
-<p>We are going to put in practice the concepts we had covered in <a class="reference external" href="https://docs.google.com/presentation/d/1D7jZ9mI-VcU9-s9IEEuGCvQH4rm5Bpwc3xek1Mu_Nak/edit#slide=id.gdffb14669d_0_176">Jupyter Book 101</a>. A complete documentation of how to <a class="reference external" href="https://jupyterbook.org/start/your-first-book.html">create your first book</a>. A complete documentation of how to <a class="reference external" href="https://jupyterbook.org/start/your-first-book.html">create your first book</a> can be found in the Jupyter Book documentation. We recommend you to use these two to create the books for this lab and use the course website as a guide.</p>
+<p>We are going to put in practice the concepts we had covered in <a class="reference external" href="https://docs.google.com/presentation/d/1D7jZ9mI-VcU9-s9IEEuGCvQH4rm5Bpwc3xek1Mu_Nak/edit#slide=id.gdffb14669d_0_176">Jupyter Book 101</a>. A complete documentation of how to <a class="reference external" href="https://jupyterbook.org/start/your-first-book.html">create your first book</a> can be found in the Jupyter Book documentation. We recommend you to use these two to create the books for this lab and use the course website as a guide.</p>
 <p>We recommend you to use Jupyter book both in the Hub and in the local installation you have in your machine. In this last case, check you have installed <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> (either enter <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">jupyter-book</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">--help</span></code> from the terminal).</p>
-<section id="part-1-create-your-first-book">
-<h2>Part 1: Create your first Book<a class="headerlink" href="#part-1-create-your-first-book" title="Permalink to this headline">#</a></h2>
+<section id="create-your-first-book">
+<h2>1. Create your first Book<a class="headerlink" href="#create-your-first-book" title="Permalink to this headline">#</a></h2>
 <p>We are going to follow step by step the example in <a class="reference external" href="https://jupyterbook.org/start/your-first-book.html">create your first book</a>. For now, we are going to create a book in our machine (Hub or local computer) and then we are going to add these files into a GitHub repository.</p>
 <ol class="arabic simple">
 <li><p>Create a new sample book using the command <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">mynewbook/</span></code>.This will create a new template folder with some basic files used to deploy the book. Explore each one of the configuration files, specially <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>. All these are explained in the tutorial.</p></li>
 <li><p>Build your book. Do this both from the Hub and your local machine.</p>
 <ol class="arabic simple">
 <li><p>If you are working in your local machine, you can simply execute <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">mynewbook/</span></code>.</p></li>
-<li><p>If you are working from the Stat159 Hub, you have to run Sphinx manually. <a class="reference external" href="https://ucb-stat-159-s22.github.io/site/lectures/documentation.html">Here</a> are the instructions of how to do this.</p></li>
+<li><p>If you are working from the Stat159 Hub, you have to run Sphinx manually. Check on the lectures notes for this.</p></li>
 </ol>
 </li>
 <li><p>Explore the markdown and Jupyter notebook created in your book. They both explain the different elements you can include in them.</p></li>
 </ol>
 </section>
-<section id="part-2-add-some-extra-features">
-<h2>Part 2: Add some extra features<a class="headerlink" href="#part-2-add-some-extra-features" title="Permalink to this headline">#</a></h2>
+<section id="add-some-extra-features">
+<h2>2. Add some extra features<a class="headerlink" href="#add-some-extra-features" title="Permalink to this headline">#</a></h2>
 <p>Let’s customize our new Jupyter Book a little bit. After each change, remember to re-build your book.</p>
 <ol class="arabic simple">
 <li><p>Add a new image to your book and use it as the logo of the Jupyter book.</p></li>
 <li><p>Add a new reference to <code class="docutils literal notranslate"><span class="pre">references.bib</span></code> and cite such reference in either a markdown or Jupyter notebook in your book. Check that when deployed, the reference appears in the right format in the book. How to add more than one citation at once? You can explore the <a class="reference external" href="https://jupyterbook.org/tutorials/references.html">Get started with references</a>.</p></li>
-<li><p>Create a new Jupyter notebook inside your book and add it to the table of contents so it appears in the book. In such library, import a new library that is not already included in <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> and add it to it so the notebook runs when the book is build. What is the difference between this <code class="docutils literal notranslate"><span class="pre">requirement.txt</span></code> and the requirement file usually named <code class="docutils literal notranslate"><span class="pre">environmnet.yml</span></code> we were using before?</p></li>
+<li><p>Create a new Jupyter notebook inside your book and add it to the table of contents so it appears in the book.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, there is an option to enable and disable the execution of notebooks when the book is build. Change the setup such that it both creates and static version and then a dynamical version that actually executes the code in the notebook.</p></li>
+<li><p>In a notebook, make an import of new library that is not already included in <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> and add it to it so the notebook runs when the book is build. What is the difference between this <code class="docutils literal notranslate"><span class="pre">requirement.txt</span></code> and the requirement file usually named <code class="docutils literal notranslate"><span class="pre">environmnet.yml</span></code> we were using before?</p></li>
 </ol>
 </section>
-<section id="part-3-publish-your-book-online">
-<h2>Part 3: Publish your book online<a class="headerlink" href="#part-3-publish-your-book-online" title="Permalink to this headline">#</a></h2>
+<section id="publish-your-book-online">
+<h2>3. Publish your book online<a class="headerlink" href="#publish-your-book-online" title="Permalink to this headline">#</a></h2>
 <p>For this part, use the tutorial <a class="reference external" href="https://jupyterbook.org/start/publish.html">Publish your book online</a>. All the instructions of how to create a new repository in GitHub with the contents of your book are included there plus and explanation about how the hosting of the Jupyter book works. After following these instructions, you should see your book hosted in <code class="docutils literal notranslate"><span class="pre">https://&lt;user&gt;.github.io/&lt;myonlinebook&gt;/</span></code>. Add this link to the description of your GitHub repository.</p>
 </section>
-<section id="part-4-keep-your-book-updated-with-gh-actions">
-<h2>Part 4: Keep your book updated with GH actions<a class="headerlink" href="#part-4-keep-your-book-updated-with-gh-actions" title="Permalink to this headline">#</a></h2>
+<section id="continuous-integration-to-keep-book-updated">
+<h2>4. Continuous Integration to keep book updated<a class="headerlink" href="#continuous-integration-to-keep-book-updated" title="Permalink to this headline">#</a></h2>
 <p>You can use the previous workflow any time you update the contents of you book or instead you can set a GitHub action that does this for you any time you make a change in the book repository. You can explore different ways of doing this in <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html?highlight=actions">GitHub Pages and Actions</a>.</p>
-<p>In order to create a new action, go to the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> window in your GitHub repository and do <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">workflow</span> <span class="pre">&gt;</span>&#160; <span class="pre">set</span> <span class="pre">up</span> <span class="pre">a</span> <span class="pre">workflow</span> <span class="pre">yourself</span></code>. Create a new file <code class="docutils literal notranslate"><span class="pre">.github/workflows/book.yml</span></code> with the same contents we have in <code class="docutils literal notranslate"><span class="pre">book.yml</span></code> file in the <a class="reference external" href="https://github.com/UCB-stat-159-s22/site/blob/main/.github/workflows/book.yml">site repository</a>. Notice that in the site we are using <code class="docutils literal notranslate"><span class="pre">book-requirement.txt</span></code> while the default name for the requirement file for Jupyter book is <code class="docutils literal notranslate"><span class="pre">requirement.txt</span></code>. In order to GitHub actions to run without an error, you should standardize the name of the requirement file.</p>
+<p>In order to create a new action, go to the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> window in your GitHub repository and do <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">workflow</span> <span class="pre">&gt;</span>&#160; <span class="pre">set</span> <span class="pre">up</span> <span class="pre">a</span> <span class="pre">workflow</span> <span class="pre">yourself</span></code>. Create a new file <code class="docutils literal notranslate"><span class="pre">.github/workflows/book.yml</span></code> with the same contents we have in <code class="docutils literal notranslate"><span class="pre">book.yml</span></code> file in the <a class="reference external" href="https://github.com/UCB-stat-159-s23/site/blob/main/.github/workflows/book.yml">site repository</a>. Notice that in the site we are using <code class="docutils literal notranslate"><span class="pre">book-requirement.txt</span></code> while the default name for the requirement file for Jupyter book is <code class="docutils literal notranslate"><span class="pre">requirement.txt</span></code>. In order to GitHub actions to run without an error, you should standardize the name of the requirement file.</p>
 <p>Now, when you push or make a new commit to the repository your changes should be reflected in the website after the corresponded GitHub action has been completed without errors (you can see this in the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> window in GitHub).</p>
 </section>
 </section>
@@ -548,10 +550,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-create-your-first-book">Part 1: Create your first Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-add-some-extra-features">Part 2: Add some extra features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-publish-your-book-online">Part 3: Publish your book online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-keep-your-book-updated-with-gh-actions">Part 4: Keep your book updated with GH actions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-first-book">1. Create your first Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-some-extra-features">2. Add some extra features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-your-book-online">3. Publish your book online</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-to-keep-book-updated">4. Continuous Integration to keep book updated</a></li>
 </ul>
   </nav></div>
 
