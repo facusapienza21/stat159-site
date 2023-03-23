@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Introduction" href="../../lab/intro/intro.html" />
-    <link rel="prev" title="Documentation, JupyterBook and Github Pages" href="documentation.html" />
+    <link rel="prev" title="Documenting code" href="documentation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -213,9 +213,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../serialization/data-serialization.html">Data Serialization</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation, JupyterBook and Github Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documenting code</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Jupyter Book</a></li>
-
 </ul>
 </li>
 </ul>
@@ -428,15 +427,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Jupyter Book</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages">GitHub Pages</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-book">What is Jupyter Book?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-book">Building a Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-book-online">Deploy Book Online</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-book">1. Create a book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-book">2. Build the book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-you-book-online">3. Deploy you book online</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -447,31 +442,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="jupyter-book">
+  <section class="tex2jax_ignore mathjax_ignore" id="jupyter-book">
 <h1>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this headline">#</a></h1>
-</section>
-<section id="github-pages">
-<h1>GitHub Pages<a class="headerlink" href="#github-pages" title="Permalink to this headline">#</a></h1>
-<p>Github allow us to host online websites and then publish our documentation online. This is exactly what Jupyter Book uses.</p>
-<p>You have been already exposed to GitHub pages thought this website. This website is deployed using GitHub pages and you can see that in the url of this website:</p>
-<p>There are ways in you can integrate new changes using continuous integration supported by GitHub actions. We are going to put this in practice using Jupyter Book.</p>
+<p>In this lectures we are going to cover another amazing tool of the Jupyter ecosystem: Jupyter Book.</p>
+<a class="reference internal image-reference" href="https://codesolid.com/wp-content/uploads/2022/02/jupyterbook.png"><img alt="eratosthenes" src="https://codesolid.com/wp-content/uploads/2022/02/jupyterbook.png" style="width: 200px;" /></a>
+<p>The Jupyter Book team has done a terrific job in documenting how to create, edit and deploy a Jupyter Book. For this lectures we are going to follow this documentation and add a few comments as we go thought it.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book Documentation</a></p></li>
+<li><p><a class="reference external" href="https://docs.google.com/presentation/d/1k0aj5uxaFd--UPtRC0i2JFIGnTXU88cIA37QeKlbhzo/edit#slide=id.gdffb14669d_0_176">Jupyter Book Slides</a></p></li>
+</ul>
 <section id="what-is-jupyter-book">
 <h2>What is Jupyter Book?<a class="headerlink" href="#what-is-jupyter-book" title="Permalink to this headline">#</a></h2>
 <p>Jupyter Book allows grabbing a collection of notebooks, markdown files, etc intro an enriched explorable book or article that can be deployed online.
 JB is a tool that</p>
 <ul class="simple">
-<li></li>
-<li></li>
-<li></li>
+<li><p>Display notebook content in a more familiar, beautiful, and accessible form.</p></li>
+<li><p>Focus on authoring,reading, and publishing.</p></li>
+<li><p>Connect with interactive computation.</p></li>
+<li><p>Community-driven, workflow- and vendor-agnostic.</p></li>
 </ul>
 </section>
-<section id="building-a-book">
-<h2>Building a Book<a class="headerlink" href="#building-a-book" title="Permalink to this headline">#</a></h2>
+<section id="create-a-book">
+<h2>1. Create a book<a class="headerlink" href="#create-a-book" title="Permalink to this headline">#</a></h2>
 <p>If you are working in the Stat159 JupyterHub, your already have Jupyter Book installed. You can check this by entering</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book --help
 </pre></div>
 </div>
-<p>in your terminal.</p>
+<p>in your terminal. If you are working in your local machine, you will have to <a class="reference external" href="https://jupyterbook.org/en/stable/start/overview.html">install Jupyter Book</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can use either <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> or <code class="docutils literal notranslate"><span class="pre">jb</span></code> to call Jupyter Book. For example, you can run the previous command with</p>
@@ -483,19 +480,25 @@ JB is a tool that</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book create mybook/
 </pre></div>
 </div>
-<p>This will create a new folder with some basic contents that are required to create and deploy the book. The important files you need to include</p>
+<p>This will create a new folder with some basic contents that are required to create and deploy the book. Besides the content files of your book, there are two key files that together determine the structure and configuration of your book:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>: Stands for table of contents. It is where we organize the contents of the books, having notebooks and markdown files organized by sections and chapters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>: It’s the general configuration file. It includes different options, like if we want to execute the notebooks with the code within them every time we build the book (<code class="docutils literal notranslate"><span class="pre">execute_notebooks</span></code>).</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Sphinx is the Python tool that builds and create all this documentation.</p>
+<p>You can take a look of how these two files look like in the <a class="reference external" href="https://github.com/UCB-stat-159-s23/site">repository</a> that contains this book.</p>
+</section>
+<section id="build-the-book">
+<h2>2. Build the book<a class="headerlink" href="#build-the-book" title="Permalink to this headline">#</a></h2>
+<p>Once the book files had been configured correctly, we can just build the <code class="docutils literal notranslate"><span class="pre">HTML</span></code> files for the book with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jb build &lt;BOOK PATH&gt;
+</pre></div>
 </div>
+<p>If you working directory is the home directory of the book, you can simply do <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code>. This will generate a static <code class="docutils literal notranslate"><span class="pre">HTML</span></code> version of the book inside the folder <code class="docutils literal notranslate"><span class="pre">build/_html</span></code> in your book home directory. If you are working in local, you can just open these files. If you are working in the cloud, you have to follow the next steps.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If we do this from the Star159 Hub, we won’t be able to open the html file. This is because we are logged in from the cloud server. If we build our book from our local machine, we will be able to open the <code class="docutils literal notranslate"><span class="pre">html</span></code> files in local.</p>
-<p>In order to make this work in the Hub, we need to use this following command</p>
+<p>If we do this from the Star159 Hub, we won’t be able to open the html file. This is because we are logged in from the cloud server.</p>
+<p>There are two different ways of opening your book html files in the Hub. The first one consists in opening a new Desktop tab from the JupyterLab launcher. This will open a virtual desktop from which you can open your html files.</p>
+<p>An alternative way of doing this is by manually creating the book with <code class="docutils literal notranslate"><span class="pre">sphinx</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book config sphinx .
 </pre></div>
 </div>
@@ -504,14 +507,24 @@ JB is a tool that</p>
 </pre></div>
 </div>
 <p>which builds the website that will be available trough a different address.</p>
+<p>We can then see the Jupyter Book by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> _build/html
+python -m http.server
+</pre></div>
 </div>
+<p>and then heading to this URL <a class="reference external" href="https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html">https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html</a>.</p>
+<p>Alternatively, you can open the display the book by opening a new Desktop from your Launcher in JupyterLab.</p>
+</div>
+<p>Once you are able to visualize your book, you are ready to start making edits and changes to both the contents and the configuration of the book.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>When adding new files to the table of contents <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, you need to build the book with the extra flag <code class="docutils literal notranslate"><span class="pre">--all</span></code>.</p>
 </div>
 </section>
-<section id="deploy-book-online">
-<h2>Deploy Book Online<a class="headerlink" href="#deploy-book-online" title="Permalink to this headline">#</a></h2>
+<section id="deploy-you-book-online">
+<h2>3. Deploy you book online<a class="headerlink" href="#deploy-you-book-online" title="Permalink to this headline">#</a></h2>
+<p>GitHub Pages allow us to host online websites and then publish our documentation online. This is exactly what Jupyter Book uses.</p>
+<p>There are ways in you can integrate new changes using continuous integration supported by GitHub actions. We are going to put this in practice using Jupyter Book.</p>
 </section>
 </section>
 
@@ -549,7 +562,7 @@ JB is a tool that</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Documentation, JupyterBook and Github Pages</p>
+        <p class="prev-next-title">Documenting code</p>
       </div>
     </a>
     <a class="right-next"
@@ -576,15 +589,11 @@ JB is a tool that</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Jupyter Book</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages">GitHub Pages</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-book">What is Jupyter Book?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-book">Building a Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-book-online">Deploy Book Online</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-book">1. Create a book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-book">2. Build the book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-you-book-online">3. Deploy you book online</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

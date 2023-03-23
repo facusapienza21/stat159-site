@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Documentation, JupyterBook and Github Pages &#8212; Collaborative and Reproducible Data Science</title>
+    <title>Documenting code &#8212; Collaborative and Reproducible Data Science</title>
   
   
   
@@ -213,9 +213,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../serialization/data-serialization.html">Data Serialization</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Documentation, JupyterBook and Github Pages</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Documenting code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="jupyter-book.html">Jupyter Book</a></li>
-
 </ul>
 </li>
 </ul>
@@ -336,7 +335,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/lectures/documentation/documentation.md" target="_blank"
+      <li><a href="../../_sources/lectures/documentation/documentation.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +345,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -405,7 +404,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -416,11 +417,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Documentation, JupyterBook and Github Pages</h1>
+    <h1>Documenting code</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1. Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docstrings">2. Docstrings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stile-guide">3. Stile Guide</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -430,28 +441,385 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="documentation-jupyterbook-and-github-pages">
-<h1>Documentation, JupyterBook and Github Pages<a class="headerlink" href="#documentation-jupyterbook-and-github-pages" title="Permalink to this headline">#</a></h1>
-<ul class="simple">
-<li><p>A quick overview of: <a class="reference external" href="https://documentation.divio.com">The Documentation System</a></p></li>
-</ul>
-<p><img alt="" src="lectures/documentation/images/doc-quadrants.png" />
-<img alt="" src="lectures/documentation/images/doc-table.png" /></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://docs.google.com/presentation/d/1D7jZ9mI-VcU9-s9IEEuGCvQH4rm5Bpwc3xek1Mu_Nak/edit#slide=id.g1057b8b45eb_0_2">JupyterBook 101</a></p></li>
-<li><p>Getting this to work on the hub?</p></li>
-</ul>
-<p>We need to run sphinx manually. These are the key commands for your reference:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book config sphinx .
-sphinx-build  . _build/html -D <span class="nv">html_baseurl</span><span class="o">=</span><span class="si">${</span><span class="nv">JUPYTERHUB_SERVICE_PREFIX</span><span class="si">}</span>/proxy/absolute/8000
+  <section class="tex2jax_ignore mathjax_ignore" id="documenting-code">
+<h1>Documenting code<a class="headerlink" href="#documenting-code" title="Permalink to this headline">#</a></h1>
+<p>In this lecture, we are going to cover some basic recommendations and good practices for documenting your code.</p>
+<section id="comments">
+<h2>1. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
+<p>It is useful to add comments as we make progress in our code. However, it is non-trivial to trade-off a code with non-comments and an over-commented code. For example, we definitively don’t want to overload our code with useless comments like</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># y is x + 1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>Then we can view the code with (in another terminal), going to the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder and running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m http.server
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A good question to ask to know if you have enough comments in your code is <em>If I stop coding now and I closed my computer, would I be able to understand what I was doing later with the code as it is?</em>.</p>
+</div>
+<p>Sometimes a specific piece of code, like a line, requires extra explanation to understand the logic of what we are doing. This could include a reference to a mathematical identity or link to a place where that is explained.</p>
+<p>Another recommendation is in general to comment of sections of code, for example, in functions. If a piece of code is worth enough to put it in a small function or block of code (eg, in a Python class), then it is worth documenting too.</p>
+<p>Now, comments are only accessible when we access the source code. In iPython, we can access the source code of a given function with the <code class="docutils literal notranslate"><span class="pre">??</span></code> symbol. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+np.linspace<span class="o">??</span>
 </pre></div>
 </div>
-<p>and then heading to this URL:</p>
-<p><a class="reference external" href="https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html">https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html</a></p>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>
+np<span class=" -Color -Color-Blue">.</span>linspace<span class=" -Color -Color-Blue">(</span>
+    start<span class=" -Color -Color-Blue">,</span>
+    stop<span class=" -Color -Color-Blue">,</span>
+    num<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">50</span><span class=" -Color -Color-Blue">,</span>
+    endpoint<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">,</span>
+    retstep<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">,</span>
+    dtype<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    axis<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span>
+<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Source:</span>   
+<span class=" -Color -Color-Blue">@</span>array_function_dispatch<span class=" -Color -Color-Blue">(</span>_linspace_dispatcher<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Green">def</span> linspace<span class=" -Color -Color-Blue">(</span>start<span class=" -Color -Color-Blue">,</span> stop<span class=" -Color -Color-Blue">,</span> num<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">50</span><span class=" -Color -Color-Blue">,</span> endpoint<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">,</span> retstep<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">,</span> dtype<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+             axis<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">):</span>
+    <span class=" -Color -Color-Blue">&quot;&quot;&quot;</span>
+<span class=" -Color -Color-Blue">    Return evenly spaced numbers over a specified interval.</span>
+
+<span class=" -Color -Color-Blue">    Returns `num` evenly spaced samples, calculated over the</span>
+<span class=" -Color -Color-Blue">    interval [`start`, `stop`].</span>
+
+<span class=" -Color -Color-Blue">    The endpoint of the interval can optionally be excluded.</span>
+
+<span class=" -Color -Color-Blue">    .. versionchanged:: 1.16.0</span>
+<span class=" -Color -Color-Blue">        Non-scalar `start` and `stop` are now supported.</span>
+
+<span class=" -Color -Color-Blue">    .. versionchanged:: 1.20.0</span>
+<span class=" -Color -Color-Blue">        Values are rounded towards ``-inf`` instead of ``0`` when an</span>
+<span class=" -Color -Color-Blue">        integer ``dtype`` is specified. The old behavior can</span>
+<span class=" -Color -Color-Blue">        still be obtained with ``np.linspace(start, stop, num).astype(int)``</span>
+
+<span class=" -Color -Color-Blue">    Parameters</span>
+<span class=" -Color -Color-Blue">    ----------</span>
+<span class=" -Color -Color-Blue">    start : array_like</span>
+<span class=" -Color -Color-Blue">        The starting value of the sequence.</span>
+<span class=" -Color -Color-Blue">    stop : array_like</span>
+<span class=" -Color -Color-Blue">        The end value of the sequence, unless `endpoint` is set to False.</span>
+<span class=" -Color -Color-Blue">        In that case, the sequence consists of all but the last of ``num + 1``</span>
+<span class=" -Color -Color-Blue">        evenly spaced samples, so that `stop` is excluded.  Note that the step</span>
+<span class=" -Color -Color-Blue">        size changes when `endpoint` is False.</span>
+<span class=" -Color -Color-Blue">    num : int, optional</span>
+<span class=" -Color -Color-Blue">        Number of samples to generate. Default is 50. Must be non-negative.</span>
+<span class=" -Color -Color-Blue">    endpoint : bool, optional</span>
+<span class=" -Color -Color-Blue">        If True, `stop` is the last sample. Otherwise, it is not included.</span>
+<span class=" -Color -Color-Blue">        Default is True.</span>
+<span class=" -Color -Color-Blue">    retstep : bool, optional</span>
+<span class=" -Color -Color-Blue">        If True, return (`samples`, `step`), where `step` is the spacing</span>
+<span class=" -Color -Color-Blue">        between samples.</span>
+<span class=" -Color -Color-Blue">    dtype : dtype, optional</span>
+<span class=" -Color -Color-Blue">        The type of the output array.  If `dtype` is not given, the data type</span>
+<span class=" -Color -Color-Blue">        is inferred from `start` and `stop`. The inferred dtype will never be</span>
+<span class=" -Color -Color-Blue">        an integer; `float` is chosen even if the arguments would produce an</span>
+<span class=" -Color -Color-Blue">        array of integers.</span>
+
+<span class=" -Color -Color-Blue">        .. versionadded:: 1.9.0</span>
+
+<span class=" -Color -Color-Blue">    axis : int, optional</span>
+<span class=" -Color -Color-Blue">        The axis in the result to store the samples.  Relevant only if start</span>
+<span class=" -Color -Color-Blue">        or stop are array-like.  By default (0), the samples will be along a</span>
+<span class=" -Color -Color-Blue">        new axis inserted at the beginning. Use -1 to get an axis at the end.</span>
+
+<span class=" -Color -Color-Blue">        .. versionadded:: 1.16.0</span>
+
+<span class=" -Color -Color-Blue">    Returns</span>
+<span class=" -Color -Color-Blue">    -------</span>
+<span class=" -Color -Color-Blue">    samples : ndarray</span>
+<span class=" -Color -Color-Blue">        There are `num` equally spaced samples in the closed interval</span>
+<span class=" -Color -Color-Blue">        ``[start, stop]`` or the half-open interval ``[start, stop)``</span>
+<span class=" -Color -Color-Blue">        (depending on whether `endpoint` is True or False).</span>
+<span class=" -Color -Color-Blue">    step : float, optional</span>
+<span class=" -Color -Color-Blue">        Only returned if `retstep` is True</span>
+
+<span class=" -Color -Color-Blue">        Size of spacing between samples.</span>
+
+
+<span class=" -Color -Color-Blue">    See Also</span>
+<span class=" -Color -Color-Blue">    --------</span>
+<span class=" -Color -Color-Blue">    arange : Similar to `linspace`, but uses a step size (instead of the</span>
+<span class=" -Color -Color-Blue">             number of samples).</span>
+<span class=" -Color -Color-Blue">    geomspace : Similar to `linspace`, but with numbers spaced evenly on a log</span>
+<span class=" -Color -Color-Blue">                scale (a geometric progression).</span>
+<span class=" -Color -Color-Blue">    logspace : Similar to `geomspace`, but with the end points specified as</span>
+<span class=" -Color -Color-Blue">               logarithms.</span>
+
+<span class=" -Color -Color-Blue">    Examples</span>
+<span class=" -Color -Color-Blue">    --------</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; np.linspace(2.0, 3.0, num=5)</span>
+<span class=" -Color -Color-Blue">    array([2.  , 2.25, 2.5 , 2.75, 3.  ])</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, endpoint=False)</span>
+<span class=" -Color -Color-Blue">    array([2. ,  2.2,  2.4,  2.6,  2.8])</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, retstep=True)</span>
+<span class=" -Color -Color-Blue">    (array([2.  ,  2.25,  2.5 ,  2.75,  3.  ]), 0.25)</span>
+
+<span class=" -Color -Color-Blue">    Graphical illustration:</span>
+
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; N = 8</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; y = np.zeros(N)</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; x1 = np.linspace(0, 10, N, endpoint=True)</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; x2 = np.linspace(0, 10, N, endpoint=False)</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; plt.plot(x1, y, &#39;o&#39;)</span>
+<span class=" -Color -Color-Blue">    [&lt;matplotlib.lines.Line2D object at 0x...&gt;]</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; plt.plot(x2, y + 0.5, &#39;o&#39;)</span>
+<span class=" -Color -Color-Blue">    [&lt;matplotlib.lines.Line2D object at 0x...&gt;]</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; plt.ylim([-0.5, 1])</span>
+<span class=" -Color -Color-Blue">    (-0.5, 1)</span>
+<span class=" -Color -Color-Blue">    &gt;&gt;&gt; plt.show()</span>
+
+<span class=" -Color -Color-Blue">    &quot;&quot;&quot;</span>
+    num <span class=" -Color -Color-Blue">=</span> operator<span class=" -Color -Color-Blue">.</span>index<span class=" -Color -Color-Blue">(</span>num<span class=" -Color -Color-Blue">)</span>
+    <span class=" -Color -Color-Green">if</span> num <span class=" -Color -Color-Blue">&lt;</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">:</span>
+        <span class=" -Color -Color-Green">raise</span> ValueError<span class=" -Color -Color-Blue">(&quot;Number of samples, %s, must be non-negative.&quot;</span> <span class=" -Color -Color-Blue">%</span> num<span class=" -Color -Color-Blue">)</span>
+    div <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">(</span>num <span class=" -Color -Color-Blue">-</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Green">if</span> endpoint <span class=" -Color -Color-Green">else</span> num
+
+    <span class=" -Color -Color-Red"># Convert float/complex array scalars to float, gh-3504</span>
+    <span class=" -Color -Color-Red"># and make sure one can use variables that have an __array_interface__, gh-6634</span>
+    start <span class=" -Color -Color-Blue">=</span> asanyarray<span class=" -Color -Color-Blue">(</span>start<span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Blue">*</span> <span class=" -Color -Color-Cyan">1.0</span>
+    stop  <span class=" -Color -Color-Blue">=</span> asanyarray<span class=" -Color -Color-Blue">(</span>stop<span class=" -Color -Color-Blue">)</span>  <span class=" -Color -Color-Blue">*</span> <span class=" -Color -Color-Cyan">1.0</span>
+
+    dt <span class=" -Color -Color-Blue">=</span> result_type<span class=" -Color -Color-Blue">(</span>start<span class=" -Color -Color-Blue">,</span> stop<span class=" -Color -Color-Blue">,</span> float<span class=" -Color -Color-Blue">(</span>num<span class=" -Color -Color-Blue">))</span>
+    <span class=" -Color -Color-Green">if</span> dtype <span class=" -Color -Color-Green">is</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">:</span>
+        dtype <span class=" -Color -Color-Blue">=</span> dt
+
+    delta <span class=" -Color -Color-Blue">=</span> stop <span class=" -Color -Color-Blue">-</span> start
+    y <span class=" -Color -Color-Blue">=</span> _nx<span class=" -Color -Color-Blue">.</span>arange<span class=" -Color -Color-Blue">(</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span> num<span class=" -Color -Color-Blue">,</span> dtype<span class=" -Color -Color-Blue">=</span>dt<span class=" -Color -Color-Blue">).</span>reshape<span class=" -Color -Color-Blue">((-</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,)</span> <span class=" -Color -Color-Blue">+</span> <span class=" -Color -Color-Blue">(</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,)</span> <span class=" -Color -Color-Blue">*</span> ndim<span class=" -Color -Color-Blue">(</span>delta<span class=" -Color -Color-Blue">))</span>
+    <span class=" -Color -Color-Red"># In-place multiplication y *= delta/div is faster, but prevents the multiplicant</span>
+    <span class=" -Color -Color-Red"># from overriding what class is produced, and thus prevents, e.g. use of Quantities,</span>
+    <span class=" -Color -Color-Red"># see gh-7142. Hence, we multiply in place only for standard scalar types.</span>
+    _mult_inplace <span class=" -Color -Color-Blue">=</span> _nx<span class=" -Color -Color-Blue">.</span>isscalar<span class=" -Color -Color-Blue">(</span>delta<span class=" -Color -Color-Blue">)</span>
+    <span class=" -Color -Color-Green">if</span> div <span class=" -Color -Color-Blue">&gt;</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">:</span>
+        step <span class=" -Color -Color-Blue">=</span> delta <span class=" -Color -Color-Blue">/</span> div
+        <span class=" -Color -Color-Green">if</span> _nx<span class=" -Color -Color-Blue">.</span>any<span class=" -Color -Color-Blue">(</span>step <span class=" -Color -Color-Blue">==</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">):</span>
+            <span class=" -Color -Color-Red"># Special handling for denormal numbers, gh-5437</span>
+            y <span class=" -Color -Color-Blue">/=</span> div
+            <span class=" -Color -Color-Green">if</span> _mult_inplace<span class=" -Color -Color-Blue">:</span>
+                y <span class=" -Color -Color-Blue">*=</span> delta
+            <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+                y <span class=" -Color -Color-Blue">=</span> y <span class=" -Color -Color-Blue">*</span> delta
+        <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+            <span class=" -Color -Color-Green">if</span> _mult_inplace<span class=" -Color -Color-Blue">:</span>
+                y <span class=" -Color -Color-Blue">*=</span> step
+            <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+                y <span class=" -Color -Color-Blue">=</span> y <span class=" -Color -Color-Blue">*</span> step
+    <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+        <span class=" -Color -Color-Red"># sequences with 0 items or 1 item with endpoint=True (i.e. div &lt;= 0)</span>
+        <span class=" -Color -Color-Red"># have an undefined step</span>
+        step <span class=" -Color -Color-Blue">=</span> NaN
+        <span class=" -Color -Color-Red"># Multiply with delta to allow possible override of output class.</span>
+        y <span class=" -Color -Color-Blue">=</span> y <span class=" -Color -Color-Blue">*</span> delta
+
+    y <span class=" -Color -Color-Blue">+=</span> start
+
+    <span class=" -Color -Color-Green">if</span> endpoint <span class=" -Color -Color-Green">and</span> num <span class=" -Color -Color-Blue">&gt;</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">:</span>
+        y<span class=" -Color -Color-Blue">[-</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">]</span> <span class=" -Color -Color-Blue">=</span> stop
+
+    <span class=" -Color -Color-Green">if</span> axis <span class=" -Color -Color-Blue">!=</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">:</span>
+        y <span class=" -Color -Color-Blue">=</span> _nx<span class=" -Color -Color-Blue">.</span>moveaxis<span class=" -Color -Color-Blue">(</span>y<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span> axis<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">if</span> _nx<span class=" -Color -Color-Blue">.</span>issubdtype<span class=" -Color -Color-Blue">(</span>dtype<span class=" -Color -Color-Blue">,</span> _nx<span class=" -Color -Color-Blue">.</span>integer<span class=" -Color -Color-Blue">):</span>
+        _nx<span class=" -Color -Color-Blue">.</span>floor<span class=" -Color -Color-Blue">(</span>y<span class=" -Color -Color-Blue">,</span> out<span class=" -Color -Color-Blue">=</span>y<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">if</span> retstep<span class=" -Color -Color-Blue">:</span>
+        <span class=" -Color -Color-Green">return</span> y<span class=" -Color -Color-Blue">.</span>astype<span class=" -Color -Color-Blue">(</span>dtype<span class=" -Color -Color-Blue">,</span> copy<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">),</span> step
+    <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+        <span class=" -Color -Color-Green">return</span> y<span class=" -Color -Color-Blue">.</span>astype<span class=" -Color -Color-Blue">(</span>dtype<span class=" -Color -Color-Blue">,</span> copy<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">File:</span>      /srv/conda/envs/notebook/lib/python3.10/site-packages/numpy/core/function_base.py
+<span class=" -Color -Color-Red">Type:</span>      function
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we can see some comments in the source code. An extra element of documentation we can see here is the header just immediately after the definition of the function. This is called the <em>docstring</em> and it serves as an extra piece of documentation for objects in Python.</p>
+</section>
+<section id="docstrings">
+<h2>2. Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">#</a></h2>
+<p>We can add comments to any function, class or module in Python using the following syntax.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sq</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the square of a number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And then we can ask for the current documentation of such module with the <code class="docutils literal notranslate"><span class="pre">?</span></code> special character:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sq<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> sq<span class=" -Color -Color-Blue">(</span>x<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Docstring:</span> Returns the square of a number.
+<span class=" -Color -Color-Red">File:</span>      /tmp/ipykernel_296/3143057924.py
+<span class=" -Color -Color-Red">Type:</span>      function
+</pre></div>
+</div>
+</div>
+</div>
+<p>The same character <code class="docutils literal notranslate"><span class="pre">?</span></code> also works for objects imported from libraries:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+np.linspace<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>
+np<span class=" -Color -Color-Blue">.</span>linspace<span class=" -Color -Color-Blue">(</span>
+    start<span class=" -Color -Color-Blue">,</span>
+    stop<span class=" -Color -Color-Blue">,</span>
+    num<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">50</span><span class=" -Color -Color-Blue">,</span>
+    endpoint<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">,</span>
+    retstep<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">,</span>
+    dtype<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    axis<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span>
+<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Docstring:</span>
+Return evenly spaced numbers over a specified interval.
+
+Returns `num` evenly spaced samples, calculated over the
+interval [`start`, `stop`].
+
+The endpoint of the interval can optionally be excluded.
+
+.. versionchanged:: 1.16.0
+    Non-scalar `start` and `stop` are now supported.
+
+.. versionchanged:: 1.20.0
+    Values are rounded towards ``-inf`` instead of ``0`` when an
+    integer ``dtype`` is specified. The old behavior can
+    still be obtained with ``np.linspace(start, stop, num).astype(int)``
+
+Parameters
+----------
+start : array_like
+    The starting value of the sequence.
+stop : array_like
+    The end value of the sequence, unless `endpoint` is set to False.
+    In that case, the sequence consists of all but the last of ``num + 1``
+    evenly spaced samples, so that `stop` is excluded.  Note that the step
+    size changes when `endpoint` is False.
+num : int, optional
+    Number of samples to generate. Default is 50. Must be non-negative.
+endpoint : bool, optional
+    If True, `stop` is the last sample. Otherwise, it is not included.
+    Default is True.
+retstep : bool, optional
+    If True, return (`samples`, `step`), where `step` is the spacing
+    between samples.
+dtype : dtype, optional
+    The type of the output array.  If `dtype` is not given, the data type
+    is inferred from `start` and `stop`. The inferred dtype will never be
+    an integer; `float` is chosen even if the arguments would produce an
+    array of integers.
+
+    .. versionadded:: 1.9.0
+
+axis : int, optional
+    The axis in the result to store the samples.  Relevant only if start
+    or stop are array-like.  By default (0), the samples will be along a
+    new axis inserted at the beginning. Use -1 to get an axis at the end.
+
+    .. versionadded:: 1.16.0
+
+Returns
+-------
+samples : ndarray
+    There are `num` equally spaced samples in the closed interval
+    ``[start, stop]`` or the half-open interval ``[start, stop)``
+    (depending on whether `endpoint` is True or False).
+step : float, optional
+    Only returned if `retstep` is True
+
+    Size of spacing between samples.
+
+
+See Also
+--------
+arange : Similar to `linspace`, but uses a step size (instead of the
+         number of samples).
+geomspace : Similar to `linspace`, but with numbers spaced evenly on a log
+            scale (a geometric progression).
+logspace : Similar to `geomspace`, but with the end points specified as
+           logarithms.
+
+Examples
+--------
+&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5)
+array([2.  , 2.25, 2.5 , 2.75, 3.  ])
+&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, endpoint=False)
+array([2. ,  2.2,  2.4,  2.6,  2.8])
+&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, retstep=True)
+(array([2.  ,  2.25,  2.5 ,  2.75,  3.  ]), 0.25)
+
+Graphical illustration:
+
+&gt;&gt;&gt; import matplotlib.pyplot as plt
+&gt;&gt;&gt; N = 8
+&gt;&gt;&gt; y = np.zeros(N)
+&gt;&gt;&gt; x1 = np.linspace(0, 10, N, endpoint=True)
+&gt;&gt;&gt; x2 = np.linspace(0, 10, N, endpoint=False)
+&gt;&gt;&gt; plt.plot(x1, y, &#39;o&#39;)
+[&lt;matplotlib.lines.Line2D object at 0x...&gt;]
+&gt;&gt;&gt; plt.plot(x2, y + 0.5, &#39;o&#39;)
+[&lt;matplotlib.lines.Line2D object at 0x...&gt;]
+&gt;&gt;&gt; plt.ylim([-0.5, 1])
+(-0.5, 1)
+&gt;&gt;&gt; plt.show()
+<span class=" -Color -Color-Red">File:</span>      /srv/conda/envs/notebook/lib/python3.10/site-packages/numpy/core/function_base.py
+<span class=" -Color -Color-Red">Type:</span>      function
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">?</span></code> prints just the docstring, while <code class="docutils literal notranslate"><span class="pre">??</span></code> shows the docstring and the source code.</p>
+</div>
+<p>Now, there is a convetion of how to write good dosctring <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">Numpy docstring standard</a>.</p>
+<p>The docstring included in the function declaration is the same one than it is later rendered online to create the Numpy documentation. See for example the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html">documentation</a> of <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> and see it matches what we just printed.</p>
+<p>The same logic applies when we write modules. For example, we can create a module with a docstring on top of <code class="docutils literal notranslate"><span class="pre">mymod.py</span></code> script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">My module - utility functions</span>
+
+<span class="sd">...</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">sq</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>and then we can just import the module and see this</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import mymod
+mymod?
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If it worth writing a function, then it is worth trying to write a small docstring. This doesn’t mean we need to write a long docstring following all the conventions, we can do this later.</p>
+<p>Investment of time: how much time we may spend figuring out what the code is doing later vs the price of writing a small comment in the code</p>
+</div>
+</section>
+<section id="stile-guide">
+<h2>3. Stile Guide<a class="headerlink" href="#stile-guide" title="Permalink to this headline">#</a></h2>
+<p>If well writing elegant code is not part of the documentation, it definitively serves as a tool to create more readable code. The are different standards of how to write good code, that include rules syntax (spaces, comments, parenthesis) and semantics of code (nomenclature for different types).
+The <a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8 -Style Guide for Python Code</a> includes many of this standards.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -506,6 +874,22 @@ sphinx-build  . _build/html -D <span class="nv">html_baseurl</span><span class="
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1. Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docstrings">2. Docstrings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stile-guide">3. Stile Guide</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/documentation/index';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Documentation, JupyterBook and Github Pages" href="documentation.html" />
+    <link rel="next" title="Documenting code" href="documentation.html" />
     <link rel="prev" title="Data Serialization" href="../serialization/data-serialization.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -213,9 +213,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../serialization/data-serialization.html">Data Serialization</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation, JupyterBook and Github Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documenting code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="jupyter-book.html">Jupyter Book</a></li>
-
 </ul>
 </li>
 </ul>
@@ -432,32 +431,15 @@ document.write(`
                   
   <section id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h1>
-<p>There are many instances where we are concert about <em>documenting</em> the progress of science. Here we found scientific papers, where we write down the analysis we did.</p>
-<p>Some of these journals where originally called letters.</p>
-<p>However, there are many spheres where we care about documenting code. These include</p>
+<p>There are many instances where we are concert about <em>documenting</em> the progress of science. Depending what is our goal, we may be interested in one form or another of documentation. See for example the following diagram</p>
+<p><img alt="" src="../../_images/doc-quadrants.png" /></p>
+<p>Different forms of <em>documentation</em> serve different goals</p>
+<p><img alt="" src="../../_images/doc-table.png" /></p>
+<p>In these lectures notes, we are going to cover different levels of documentation:</p>
 <ul class="simple">
-<li><p>Commenting your code. Good practices for documenting code? Comments must part of the code as long as they improve the readability of the code.</p></li>
+<li><p><a class="reference internal" href="documentation.html"><span class="doc std std-doc">Documenting Code</span></a>.</p></li>
+<li><p><a class="reference internal" href="jupyter-book.html"><span class="doc std std-doc">Jupyter Book</span></a>.</p></li>
 </ul>
-<ul class="simple">
-<li><p>A quick overview of: <a class="reference external" href="https://documentation.divio.com">The Documentation System</a></p></li>
-</ul>
-<p><img alt="" src="../../_images/doc-quadrants.png" />
-<img alt="" src="../../_images/doc-table.png" /></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://docs.google.com/presentation/d/1D7jZ9mI-VcU9-s9IEEuGCvQH4rm5Bpwc3xek1Mu_Nak/edit#slide=id.g1057b8b45eb_0_2">JupyterBook 101</a></p></li>
-<li><p>Getting this to work on the hub?</p></li>
-</ul>
-<p>We need to run sphinx manually. These are the key commands for your reference:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book config sphinx .
-sphinx-build  . _build/html -D <span class="nv">html_baseurl</span><span class="o">=</span><span class="si">${</span><span class="nv">JUPYTERHUB_SERVICE_PREFIX</span><span class="si">}</span>/proxy/absolute/8000
-</pre></div>
-</div>
-<p>Then we can view the code with (in another terminal), going to the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder and running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m http.server
-</pre></div>
-</div>
-<p>and then heading to this URL:</p>
-<p><a class="reference external" href="https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html">https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html</a></p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -504,7 +486,7 @@ sphinx-build  . _build/html -D <span class="nv">html_baseurl</span><span class="
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Documentation, JupyterBook and Github Pages</p>
+        <p class="prev-next-title">Documenting code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
